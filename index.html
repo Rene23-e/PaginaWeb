@@ -6,31 +6,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IESTP Huanta</title>
+    <title>IESP Huanta</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js" defer></script>
 </head>
 
 <body>
 
+    <div class="contact-bar" aria-label="Información de contacto">
+        <span><b aria-hidden="true">☎</b> (066) 322296</span>
+        <span><b aria-hidden="true">⌖</b> Jr. Córdoba N.º 650</span>
+        <span><b aria-hidden="true">✉</b> informes@iestphuanta.edu.pe</span>
+        <span aria-label="Facebook">f</span>
+    </div>
+
     <!-- HEADER -->
-    <header>
+    <header class="site-header">
 
-        <nav>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a class="brand" href="#hero">
+                <img class="header-logo" src="assets/logo-huanta.png" alt="IESP Huanta">
+            </a>
 
-            <ul>
+            <ul class="nav-links">
 
-                <li>Nosotros</li>
+                <li><a href="#nosotros">Nosotros⌄</a></li>
 
-                <li>Programas de Estudio</li>
+                <li>
+                    <details class="nav-programs">
+                        <summary class="nav-programs-toggle">Programas de estudios <span aria-hidden="true">⌄</span></summary>
+                        <div id="programs-menu" class="nav-programs-menu">
+                            <a href="diseño.html"><span>⌘</span> Diseño y Programación Web</a>
+                            <a href="enfermeria.html"><span>✚</span> Enfermería Técnica</a>
+                            <a href="industrias.html"><span>◈</span> Industrias de Alimentos y Bebidas</a>
+                            <a href="mecatronica.html"><span>⚙</span> Mecatrónica Automotriz</a>
+                            <a href="agropecuaria.html"><span>✦</span> Producción Agropecuaria</a>
+                        </div>
+                    </details>
+                </li>
 
-                <li>Admisión y Matrícula</li>
+                <li><a href="#noticias">Admisión y Matrícula⌄</a></li>
 
-                <li>Transparencia</li>
+                <li><a href="#estadisticas">Transparencia</a></li>
 
-                <li>Trámite</li>
+                <li><a href="#contacto">Trámite⌄</a></li>
 
-                <li>Contáctanos</li>
+                <li><a href="#contacto">Contacto</a></li>
 
-                <li>Servicios</li>
+                <li><a href="#servicios">Servicios⌄</a></li>
 
             </ul>
 
@@ -43,50 +67,61 @@
 
         <!-- HERO -->
 
-        <section id="hero">
+        <section id="hero" class="hero-section">
 
-            <h1>
-                Construye tu futuro con formación de calidad
-            </h1>
+            <div class="hero-copy">
+                <p class="eyebrow">Instituto de Educación Superior Público “Huanta”</p>
+                <h1>Construye tu futuro con formación de calidad</h1>
 
-            <p>
-                Instituto de Educación Superior Público Huanta
-            </p>
+                <p class="hero-lead">Aprende haciendo, innova con propósito y prepárate para transformar tu comunidad desde Huanta.</p>
 
-            <button>
-                Ver Programas
-            </button>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#carreras">Ver programas <span aria-hidden="true">&#8594;</span></a>
+                    <a class="button button-quiet" href="#contacto">Solicitar información</a>
+                </div>
+            </div>
+            <div class="hero-note">
+                <span class="hero-note-number">01</span>
+                <p>Una institución que acompaña tu crecimiento profesional.</p>
+            </div>
 
         </section>
 
         <!-- NOSOTROS -->
 
-        <section id="nosotros">
+        <section id="nosotros" class="intro-section content-section">
 
-            <h2>Sobre Nosotros</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Nuestra identidad</p>
+                <h2>Sobre Nosotros</h2>
+            </div>
 
-            <p>
-                Somos una institución licenciada comprometida con la
-                formación profesional técnica de calidad.
-            </p>
+            <div class="intro-content">
+                <p class="intro-lead">
+                    Somos una institución licenciada comprometida con la
+                    formación profesional técnica de calidad.
+                </p>
 
-            <h3>Misión</h3>
+                <div class="principles-grid">
+                    <article>
+                        <span class="principle-number">01</span>
+                        <h3>Misión</h3>
+                        <p>Formar profesionales técnicos competitivos.</p>
+                    </article>
 
-            <p>
-                Formar profesionales técnicos competitivos.
-            </p>
-
-            <h3>Visión</h3>
-
-            <p>
-                Ser líderes en educación superior tecnológica.
-            </p>
+                    <article>
+                        <span class="principle-number">02</span>
+                        <h3>Visión</h3>
+                        <p>Ser líderes en educación superior tecnológica.</p>
+                    </article>
+                </div>
+            </div>
 
         </section>
 
         <!-- ESTADISTICAS -->
 
-        <section id="estadisticas">
+        <section id="estadisticas" class="stats-section content-section">
 
             <h2>Estadísticas</h2>
 
@@ -122,7 +157,7 @@
 
         <!-- CARRERAS -->
 
-        <section id="carreras">
+        <section id="carreras" class="content-section cards-section">
 
             <h2>Programas de Estudio</h2>
 
@@ -180,7 +215,7 @@
 
         <!-- SERVICIOS -->
 
-        <section id="servicios">
+        <section id="servicios" class="content-section cards-section services-section">
 
             <h2>Servicios Institucionales</h2>
 
@@ -218,7 +253,7 @@
 
         <!-- NOTICIAS -->
 
-        <section id="noticias">
+        <section id="noticias" class="content-section split-section">
 
             <h2>Últimas Noticias</h2>
 
@@ -246,7 +281,7 @@
 
         <!-- EVENTOS -->
 
-        <section id="eventos">
+        <section id="eventos" class="content-section split-section events-section">
 
             <h2>Eventos</h2>
 
@@ -274,33 +309,33 @@
 
         <!-- GALERIA -->
 
-        <section id="galeria">
+        <section id="galeria" class="content-section gallery-section">
 
             <h2>Galería Institucional</h2>
 
-            assets/images/galeria1.jpg
-            assets/images/galeria2.jpg
-            assets/images/galeria3.jpg
+            <div class="gallery-grid" aria-label="Momentos de la vida institucional">
+                <div class="gallery-tile gallery-tile-tall"><span>Aprendizaje práctico</span></div>
+                <div class="gallery-tile"><span>Comunidad estudiantil</span></div>
+                <div class="gallery-tile"><span>Innovación con propósito</span></div>
+            </div>
 
         </section>
 
         <!-- CONTACTO -->
 
-        <section id="contacto">
+        <section id="contacto" class="content-section contact-section">
 
             <h2>Contáctanos</h2>
 
             <form>
 
-                <input type="text" placeholder="Nombre">
+                <label>Nombre<input type="text" placeholder="Tu nombre" required></label>
 
-                <input type="email" placeholder="Correo">
+                <label>Correo electrónico<input type="email" placeholder="tu@correo.com" required></label>
 
-                <textarea placeholder="Mensaje"></textarea>
+                <label class="form-wide">Mensaje<textarea placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea></label>
 
-                <button type="submit">
-                    Enviar
-                </button>
+                <button class="button button-primary form-wide" type="submit">Enviar consulta <span aria-hidden="true">&#8594;</span></button>
 
             </form>
 
@@ -310,17 +345,40 @@
 
     <!-- FOOTER -->
 
-    <footer>
+    <section id="pie-pagina" class="footer-section" aria-label="Pie de página">
+        <footer class="site-footer site-footer-home">
 
-        <h3>Instituto de Educación Superior Público Huanta</h3>
+        <section class="footer-main">
+            <section class="footer-brand">
+                <img class="footer-logo-image" src="assets/logo-huanta.png" alt="IESP Huanta">
+                <p>Instituto de Educación Superior Público “Huanta”</p>
+            </section>
 
-        <p>Jr. Córdoba N.º 650</p>
+            <section class="footer-column">
+                <h3>Facebook</h3>
+                <a class="footer-social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">f</span> Facebook
+                </a>
+            </section>
 
-        <p>Teléfono: (066) 322296</p>
+            <section class="footer-column">
+                <h3>Información</h3>
+                <p><span class="footer-icon" aria-hidden="true">⌖</span> Jr. Córdoba N.º 650</p>
+                <a href="tel:+5166322296"><span class="footer-icon" aria-hidden="true">◔</span> Teléfono: (066) 322296</a>
+            </section>
 
-        <p>Ayacucho - Perú</p>
+            <section class="footer-column footer-connect">
+                <h3>Horario de atención</h3>
+                <p>Lun – Vier: 7:30 am – 1:15 pm</p>
+            </section>
+        </section>
 
-    </footer>
+        <section class="footer-bottom">
+            <p>&copy; 2026 Instituto de Educación Superior Público “Huanta”</p>
+        </section>
+
+        </footer>
+    </section>
 
 </body>
 
