@@ -35,6 +35,52 @@ profileTabs.forEach((tab) => {
     });
 });
 
+const skillButtons = [...document.querySelectorAll('[data-skill]')];
+const skillPreview = document.querySelector('[data-skill-preview]');
+const skillImage = document.querySelector('[data-skill-image]');
+const skillTitle = document.querySelector('[data-skill-title]');
+const skillDescription = document.querySelector('[data-skill-description]');
+
+const skills = {
+    creatividad: {
+        title: 'Creatividad',
+        description: 'Transformar ideas en interfaces y experiencias digitales originales, utiles y atractivas.',
+        image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85',
+        alt: 'Bocetos de una interfaz digital creativa'
+    },
+    innovacion: {
+        title: 'Innovacion',
+        description: 'Probar nuevas herramientas y soluciones para mejorar la forma en que las personas usan la tecnologia.',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85',
+        alt: 'Estudiante trabajando en un proyecto de tecnologia'
+    },
+    equipo: {
+        title: 'Trabajo en equipo',
+        description: 'Colaborar, compartir ideas y organizar tareas para convertir un proyecto web en una solucion real.',
+        image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85',
+        alt: 'Equipo colaborando alrededor de una mesa'
+    }
+};
+
+skillButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const skill = skills[button.dataset.skill];
+        if (!skill) {
+            return;
+        }
+
+        skillButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+        skillImage.src = skill.image;
+        skillImage.alt = skill.alt;
+        skillTitle.textContent = skill.title;
+        skillDescription.textContent = skill.description;
+        skillPreview.hidden = false;
+        skillPreview.classList.remove('skill-preview-refresh');
+        void skillPreview.offsetWidth;
+        skillPreview.classList.add('skill-preview-refresh');
+    });
+});
+
 const testimonialCards = [...document.querySelectorAll('.testimonial-card')];
 const testimonialWindow = document.querySelector('.testimonial-window');
 const dots = [...document.querySelectorAll('.roulette-dots button')];
@@ -158,6 +204,9 @@ const scheduleBody = document.querySelector('[data-schedule-body]');
 const scheduleOpen = document.querySelector('[data-schedule-open]');
 const scheduleClose = document.querySelector('[data-schedule-close]');
 const scheduleTabs = [...document.querySelectorAll('[data-schedule-tab]')];
+const quickInfoModal = document.getElementById('quickInfoModal');
+const quickInfoClose = document.querySelector('.quick-info-close');
+const quickOpenButton = document.querySelector('[data-quick-open]');
 
 const renderSchedule = (semester) => {
     scheduleBody.innerHTML = schedules[semester].map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join('')}</tr>`).join('');
@@ -180,3 +229,41 @@ scheduleClose.addEventListener('click', () => {
 });
 
 scheduleTabs.forEach((tab) => tab.addEventListener('click', () => renderSchedule(tab.dataset.scheduleTab)));
+
+const openQuickInfo = () => {
+    if (quickInfoModal) {
+        quickInfoModal.hidden = false;
+        document.body.classList.add('modal-open');
+    }
+};
+
+const closeQuickInfo = () => {
+    if (quickInfoModal) {
+        quickInfoModal.hidden = true;
+        document.body.classList.remove('modal-open');
+    }
+};
+
+quickInfoClose?.addEventListener('click', closeQuickInfo);
+quickOpenButton?.addEventListener('click', openQuickInfo);
+quickInfoModal?.addEventListener('click', (event) => {
+    if (event.target === quickInfoModal) {
+        closeQuickInfo();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    const isTypingTarget = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName || '');
+
+    if (event.key.toLowerCase() === 'q' && !isTypingTarget) {
+        event.preventDefault();
+        openQuickInfo();
+    }
+
+    if (event.key === 'Escape') {
+        closeQuickInfo();
+        if (scheduleModal && !scheduleModal.hidden) {
+            scheduleModal.hidden = true;
+        }
+    }
+});
