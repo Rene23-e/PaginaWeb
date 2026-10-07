@@ -31,7 +31,7 @@ body {
     background-size: 300% 300%;
     font-family: Arial, sans-serif;
     line-height: 1.55;
-    animation: page-background-drift 1s ease-in-out infinite alternate;
+    animation: page-background-drift 28s ease-in-out infinite alternate;
 }
 
 .contact-bar {
@@ -381,7 +381,7 @@ a {
     padding: 7rem max(2rem, calc((100% - 1180px) / 2));
     background: linear-gradient(120deg, var(--turquoise-50), var(--turquoise-100), #bfdbfe, var(--turquoise-50));
     background-size: 240% 240%;
-    animation: section-color-shift 1s ease-in-out infinite alternate;
+    animation: section-color-shift 22s ease-in-out infinite alternate;
 }
 
 .section-heading {
@@ -459,7 +459,7 @@ a {
     color: #ffffff;
     background: linear-gradient(120deg, #0b2d5c, var(--turquoise-700), #2563eb, #071f49);
     background-size: 240% 240%;
-    animation: stats-color-shift 1s ease-in-out infinite alternate;
+    animation: stats-color-shift 26s ease-in-out infinite alternate;
 }
 
 .stats-section h2 {
@@ -496,15 +496,10 @@ a {
     gap: 1rem;
 }
 
-#carreras.cards-section {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
 .cards-section h2 {
     grid-column: 1 / -1;
 }
 
-.cards-section article,
 .split-section article {
     position: relative;
     display: flex;
@@ -519,35 +514,24 @@ a {
     overflow: hidden;
     transform: perspective(900px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)) translateY(var(--lift, 0));
     transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
-    animation: card-contrast 1s ease-in-out infinite alternate;
+    animation: card-contrast 14s ease-in-out infinite alternate;
 }
 
-.cards-section article:nth-of-type(2),
 .split-section article:nth-of-type(2) {
     animation-delay: 120ms;
 }
 
-.cards-section article:nth-of-type(3),
 .split-section article:nth-of-type(3) {
     animation-delay: 240ms;
 }
 
-.cards-section article:nth-of-type(4) {
-    animation-delay: 360ms;
-}
-
-.cards-section article:nth-of-type(5) {
-    animation-delay: 480ms;
-}
-
-.cards-section article:hover,
+.split-section article:hover,
 .split-section article:hover {
     --lift: -8px;
     border-color: rgba(37, 99, 235, 0.6);
     box-shadow: 0 16px 34px rgba(11, 45, 92, 0.18);
 }
 
-.cards-section article::after,
 .split-section article::after {
     position: absolute;
     right: -1.5rem;
@@ -561,32 +545,6 @@ a {
     pointer-events: none;
 }
 
-.cards-section article:nth-of-type(1) {
-    --card-radius: 26px 8px 8px 8px;
-    background: #bfdbfe;
-}
-
-.cards-section article:nth-of-type(2) {
-    --card-radius: 8px 26px 8px 8px;
-    background: #a9c8f5;
-}
-
-.cards-section article:nth-of-type(3) {
-    --card-radius: 8px 8px 26px 8px;
-    background: #dbeafe;
-}
-
-.cards-section article:nth-of-type(4) {
-    --card-radius: 8px 8px 8px 26px;
-    background: #93baf0;
-}
-
-.cards-section article:nth-of-type(5) {
-    --card-radius: 20px;
-    background: #e8f1ff;
-}
-
-.cards-section article h3,
 .split-section article h3 {
     margin: 0 0 0.75rem;
     font-family: Georgia, 'Times New Roman', serif;
@@ -595,7 +553,6 @@ a {
     line-height: 1.1;
 }
 
-.cards-section article p,
 .split-section article p {
     margin: 0;
     color: var(--muted);
@@ -655,7 +612,7 @@ a {
     padding-left: max(2rem, calc((100% - 1180px) / 2));
     background: linear-gradient(120deg, #dbeafe, #93baf0, #bfdbfe, #eff6ff);
     background-size: 240% 240%;
-    animation: gallery-color-shift 1s ease-in-out infinite alternate;
+    animation: gallery-color-shift 24s ease-in-out infinite alternate;
 }
 
 .gallery-grid {
@@ -925,7 +882,6 @@ a {
     .content-section,
     .stats-section,
     .gallery-section,
-    .cards-section article,
     .split-section article {
         animation: none;
     }

@@ -1,3 +1,127 @@
+const programVideos = [...document.querySelectorAll('[data-program-video]')];
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobileNavToggle = document.querySelector('[data-mobile-nav-toggle]');
+const siteNavigation = document.querySelector('#site-navigation');
+const mobileNavLabel = document.querySelector('[data-menu-label]');
+
+if (!prefersReducedMotion) {
+    programVideos.forEach((video) => video.play().catch(() => {}));
+}
+
+const setMobileNavigation = (isOpen) => {
+    mobileNavToggle?.setAttribute('aria-expanded', String(isOpen));
+    mobileNavToggle?.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    mobileNavLabel?.replaceChildren(document.createTextNode(isOpen ? 'Cerrar' : 'Menú'));
+    siteNavigation?.classList.toggle('is-open', isOpen);
+};
+
+mobileNavToggle?.addEventListener('click', () => {
+    setMobileNavigation(mobileNavToggle.getAttribute('aria-expanded') !== 'true');
+});
+
+siteNavigation?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMobileNavigation(false));
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        setMobileNavigation(false);
+    }
+});
+
+const revealTargets = [...document.querySelectorAll('.program-detail, .modules-intro, .modules-carousel, .graduate-profile-visual, .graduate-profile-heading, .profile-tabs, .future-copy, .orbit-scene, .study-heading, .profile-card, .semester-plan, .testimonials-heading, .testimonial-roulette')];
+
+if (prefersReducedMotion || document.hidden || !('IntersectionObserver' in window)) {
+    revealTargets.forEach((target) => target.classList.add('page-reveal-visible'));
+} else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('page-reveal-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.14, rootMargin: '0px 0px -4% 0px' });
+
+    revealTargets.forEach((target, index) => {
+        target.classList.add('page-reveal');
+        target.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
+        revealObserver.observe(target);
+    });
+}
+
+const modulesCarousel = document.querySelector('[data-modules-carousel]');
+const modulesTrack = modulesCarousel?.querySelector('[data-module-track]');
+const moduleSlides = [...(modulesTrack?.querySelectorAll('[data-module-slide]') || [])];
+const moduleDots = [...(modulesCarousel?.querySelectorAll('[data-module-dot]') || [])];
+const moduleCount = modulesCarousel?.querySelector('[data-module-count]');
+let activeModule = 0;
+let moduleTimer;
+
+if (modulesCarousel && modulesTrack && moduleSlides.length) {
+    const renderModuleState = (index) => {
+        activeModule = index;
+        moduleSlides.forEach((slide, slideIndex) => {
+            slide.classList.toggle('is-active', slideIndex === activeModule);
+            slide.setAttribute('aria-label', `Módulo ${slideIndex + 1} de ${moduleSlides.length}`);
+        });
+        moduleDots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === activeModule;
+            dot.classList.toggle('is-active', isActive);
+            dot.setAttribute('aria-current', String(isActive));
+        });
+        if (moduleCount) {
+            moduleCount.textContent = String(activeModule + 1).padStart(2, '0');
+        }
+    };
+
+    const goToModule = (index) => {
+        const nextIndex = (index + moduleSlides.length) % moduleSlides.length;
+        const slide = moduleSlides[nextIndex];
+        const offset = slide.getBoundingClientRect().left - modulesTrack.getBoundingClientRect().left + modulesTrack.scrollLeft - (modulesTrack.clientWidth - slide.offsetWidth) / 2;
+        renderModuleState(nextIndex);
+        if (prefersReducedMotion || document.hidden) {
+            modulesTrack.scrollLeft = offset;
+        } else {
+            modulesTrack.scrollTo({ left: offset, behavior: 'smooth' });
+        }
+    };
+
+    const syncModuleState = () => {
+        const trackCenter = modulesTrack.getBoundingClientRect().left + modulesTrack.clientWidth / 2;
+        const nearestIndex = moduleSlides.reduce((nearest, slide, index) => {
+            const slideCenter = slide.getBoundingClientRect().left + slide.getBoundingClientRect().width / 2;
+            const nearestCenter = moduleSlides[nearest].getBoundingClientRect().left + moduleSlides[nearest].getBoundingClientRect().width / 2;
+            return Math.abs(slideCenter - trackCenter) < Math.abs(nearestCenter - trackCenter) ? index : nearest;
+        }, 0);
+        renderModuleState(nearestIndex);
+    };
+
+    const pauseModuleRotation = () => window.clearInterval(moduleTimer);
+    const startModuleRotation = () => {
+        pauseModuleRotation();
+        if (prefersReducedMotion || document.hidden) {
+            return;
+        }
+        moduleTimer = window.setInterval(() => goToModule(activeModule + 1), 7200);
+    };
+
+    modulesCarousel.querySelector('[data-module-prev]')?.addEventListener('click', () => goToModule(activeModule - 1));
+    modulesCarousel.querySelector('[data-module-next]')?.addEventListener('click', () => goToModule(activeModule + 1));
+    moduleDots.forEach((dot) => dot.addEventListener('click', () => goToModule(Number(dot.dataset.moduleDot))));
+    modulesTrack.addEventListener('scroll', syncModuleState, { passive: true });
+    modulesCarousel.addEventListener('pointerenter', pauseModuleRotation);
+    modulesCarousel.addEventListener('pointerleave', startModuleRotation);
+    modulesCarousel.addEventListener('focusin', pauseModuleRotation);
+    modulesCarousel.addEventListener('focusout', (event) => {
+        if (!modulesCarousel.contains(event.relatedTarget)) {
+            startModuleRotation();
+        }
+    });
+    document.addEventListener('visibilitychange', startModuleRotation);
+    startModuleRotation();
+}
+
 // Contenido que aparece en la ruleta de testimonios.
 const testimonials = [
     {
@@ -45,20 +169,20 @@ const skills = {
     creatividad: {
         title: 'Creatividad',
         description: 'Transformar ideas en interfaces y experiencias digitales originales, utiles y atractivas.',
-        image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85',
-        alt: 'Bocetos de una interfaz digital creativa'
+        image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=85',
+        alt: 'Equipo creativo desarrollando una idea visual'
     },
     innovacion: {
         title: 'Innovacion',
         description: 'Probar nuevas herramientas y soluciones para mejorar la forma en que las personas usan la tecnologia.',
-        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85',
-        alt: 'Estudiante trabajando en un proyecto de tecnologia'
+        image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1000&q=85',
+        alt: 'Codigo en una pantalla durante un proyecto de programacion'
     },
     equipo: {
         title: 'Trabajo en equipo',
         description: 'Colaborar, compartir ideas y organizar tareas para convertir un proyecto web en una solucion real.',
-        image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85',
-        alt: 'Equipo colaborando alrededor de una mesa'
+        image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85',
+        alt: 'Equipo colaborando para resolver un proyecto'
     }
 };
 
@@ -112,6 +236,9 @@ const showTestimonial = (index, direction = 'next') => {
 // Reinicia el ciclo después de una selección manual o un gesto táctil.
 const restartRotation = () => {
     window.clearInterval(rotationTimer);
+    if (prefersReducedMotion || document.hidden) {
+        return;
+    }
     rotationTimer = window.setInterval(() => showTestimonial(currentTestimonial + 1), 5000);
 };
 
@@ -141,6 +268,14 @@ testimonialWindow.addEventListener('touchend', (event) => {
 
 showTestimonial(0);
 restartRotation();
+testimonialWindow.addEventListener('pointerenter', () => window.clearInterval(rotationTimer));
+testimonialWindow.addEventListener('pointerleave', restartRotation);
+testimonialWindow.addEventListener('focusin', () => window.clearInterval(rotationTimer));
+testimonialWindow.addEventListener('focusout', (event) => {
+    if (!testimonialWindow.contains(event.relatedTarget)) {
+        restartRotation();
+    }
+});
 
 const competencyTabs = [...document.querySelectorAll('.competency-tab')];
 const competencyPanels = [...document.querySelectorAll('.competency-panel')];

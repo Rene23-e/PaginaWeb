@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply antialiased;
+	}
+}
+
+@layer components {
+	.career-photo {
+		@apply absolute inset-0 h-full w-full object-cover motion-safe:animate-hero-drift;
+	}
+
+	.career-shade {
+		@apply absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/30;
+	}
+}

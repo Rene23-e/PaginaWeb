@@ -7,9 +7,10 @@
 	<title>Diseño y Programación Web | IESP Huanta</title>
 	<link rel="stylesheet" href="css/diseno.css">
 	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/tailwind.generated.css">
 </head>
 
-<body>
+<body class="bg-[#f7f8f4] text-[#202b39] antialiased selection:bg-lime-200">
 	<!-- Datos de contacto institucional -->
 	<div class="contact-bar" aria-label="Información de contacto">
 		<span><b aria-hidden="true">☎</b> (066) 322296</span>
@@ -19,28 +20,68 @@
 	</div>
 
 	<!-- Navegación principal -->
-	<header class="site-header">
+	<header class="site-header site-header-reference">
 		<a class="brand" href="index.html" aria-label="Volver al inicio">
 			<img src="assets/logo-huanta.png" alt="IESP Huanta">
 		</a>
-		<nav aria-label="Navegación principal">
-			<a href="index.html#nosotros">Nosotros⌄</a>
+		<button class="mobile-menu-trigger" type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú">
+			<span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+			<span data-menu-label>Menú</span>
+		</button>
+		<nav id="site-navigation" aria-label="Navegación principal">
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Nosotros <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#nosotros"><span>01</span> Nuestra institución</a>
+					<a href="index.html#nosotros"><span>02</span> Misión y visión</a>
+					<a href="index.html#estadisticas"><span>03</span> Instituto licenciado</a>
+				</div>
+			</details>
 			<details class="nav-programs">
 				<summary class="nav-programs-toggle active">Programas de estudios <span aria-hidden="true">⌄</span></summary>
 				<div id="programs-menu" class="nav-programs-menu">
-					<a class="current-program" href="diseño.html"><span>⌘</span> Diseño y Programación Web</a>
+					<a class="current-program" href="diseño.html" aria-current="page"><span>⌘</span> Diseño y Programación Web</a>
 					<a href="enfermeria.html"><span>✚</span> Enfermería Técnica</a>
 					<a href="industrias.html"><span>◈</span> Industrias de Alimentos y Bebidas</a>
 					<a href="mecatronica.html"><span>⚙</span> Mecatrónica Automotriz</a>
 					<a href="agropecuaria.html"><span>✦</span> Producción Agropecuaria</a>
 				</div>
 			</details>
-			<a href="index.html#noticias">Admisión y Matrícula⌄</a>
-			<a href="index.html#estadisticas">Transparencia⌄</a>
-			<a href="index.html#contacto">Trámite⌄</a>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Admisión y Matrícula <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#noticias"><span>01</span> Matrícula</a>
+					<a href="index.html#contacto"><span>02</span> Solicitar información</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Transparencia <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#estadisticas"><span>01</span> Estadísticas institucionales</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Trámite <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#contacto"><span>01</span> Mesa de partes y consultas</a>
+				</div>
+			</details>
 			<a href="index.html#contacto">Contáctanos</a>
-			<a href="index.html#servicios">Servicios⌄</a>
-			<a href="index.html">Otras páginas⌄</a>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Servicios <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#servicios"><span>01</span> Biblioteca</a>
+					<a href="index.html#servicios"><span>02</span> Laboratorios</a>
+					<a href="index.html#servicios"><span>03</span> Red telemática</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Otras páginas <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html"><span>01</span> Página principal</a>
+					<a href="index.html#galeria"><span>02</span> Galería institucional</a>
+				</div>
+			</details>
 		</nav>
 	</header>
 
@@ -51,38 +92,46 @@
 
 	<main>
 		<!-- Presentación del programa de estudios -->
-		<section class="program-hero" aria-labelledby="program-title">
-			<div class="program-collage" aria-hidden="true">
-				<div class="collage-panel panel-health">Cuidado<br>y bienestar</div>
-				<div class="collage-panel panel-code">&lt;/&gt;</div>
-				<div class="collage-panel panel-tech">TECNO<br>LOGÍA</div>
-				<div class="collage-panel panel-agro">Producción<br>con futuro</div>
-				<div class="collage-number number-carreras">05 <small>Carreras</small></div>
-				<div class="collage-number number-years">03 <small>Años</small></div>
+		<section class="program-hero relative grid min-h-[calc(100svh-8rem)] grid-cols-1 overflow-hidden bg-[#12353b] text-white lg:min-h-[calc(100svh-13rem)] lg:grid-cols-[0.95fr_1.05fr]" aria-labelledby="program-title">
+			<div class="group absolute inset-0 min-h-full overflow-hidden bg-slate-900 lg:relative lg:inset-auto lg:min-h-0">
+				<video class="absolute inset-0 h-full w-full object-cover object-center motion-reduce:animate-none" data-program-video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=90" aria-hidden="true" tabindex="-1">
+					<source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4" type="video/mp4">
+				</video>
+				<div class="absolute inset-0 bg-gradient-to-t from-[#102c31]/90 via-[#102c31]/15 to-transparent" aria-hidden="true"></div>
+				<div class="absolute left-6 top-6 z-10 flex items-center gap-3 sm:left-10 sm:top-10">
+					<span class="grid h-11 w-11 place-items-center border border-white/60 bg-white/10 font-mono text-sm backdrop-blur-sm">&lt;/&gt;</span>
+					<span class="text-xs font-bold uppercase tracking-[0.18em] text-white">Tecnología creativa</span>
+				</div>
+				<div class="absolute bottom-7 left-6 z-10 hidden border-l-2 border-lime-300 pl-4 sm:bottom-10 sm:left-10 lg:block">
+					<p class="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-lime-200">Aprender haciendo</p>
+					<p class="font-serif text-2xl text-white sm:text-3xl">Ideas que se vuelven experiencias.</p>
+				</div>
 			</div>
 
-			<div class="program-copy">
-				<span class="decorative-dot" aria-hidden="true"></span>
-				<p class="breadcrumb"><a href="index.html">Home</a><span>»</span><a href="index.html#servicios">Services</a><span>»</span> Diseño y Programación Web</p>
-				<h1 id="program-title">Diseño y Programación Web</h1>
+			<div class="relative z-10 flex min-h-[calc(100svh-8rem)] min-w-0 w-full flex-col justify-center overflow-hidden bg-gradient-to-t from-[#12353b]/95 via-[#12353b]/80 to-[#12353b]/45 px-5 py-6 sm:px-12 sm:py-12 lg:min-h-0 lg:bg-[#12353b] lg:px-12 lg:py-14 xl:px-16">
+				<div class="pointer-events-none absolute -right-12 top-12 h-48 w-48 rotate-12 border border-lime-200/20 motion-safe:animate-shape-drift" aria-hidden="true"></div>
+				<p class="relative z-10 mb-4 text-xs font-bold uppercase tracking-[0.2em] text-lime-300 sm:mb-5">Programa de estudios · Huanta</p>
+				<h1 id="program-title" class="relative z-10 w-full max-w-full font-serif text-3xl leading-[1.04] text-white sm:text-5xl lg:text-5xl 2xl:text-6xl"><span class="block">Diseño y</span><span class="block">Programación Web</span></h1>
+				<p class="relative z-10 mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-6 sm:text-lg">Convierte creatividad y tecnología en sitios, aplicaciones y experiencias digitales que resuelven necesidades reales.</p>
+				<div class="relative z-10 mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+					<a class="inline-flex min-h-11 w-full items-center justify-center gap-3 bg-lime-300 px-5 py-3 text-sm font-bold text-[#12353b] transition duration-300 hover:-translate-y-1 hover:bg-lime-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-200 motion-reduce:transition-none sm:w-auto" href="#modules-title">Explorar módulos <span aria-hidden="true">↗</span></a>
+					<a class="inline-flex min-h-11 w-full items-center justify-center border border-white/35 px-5 py-3 text-sm font-bold text-white transition duration-300 hover:border-white hover:bg-white/10 motion-reduce:transition-none sm:w-auto" href="#study-title">Ver plan de estudios</a>
+				</div>
 			</div>
 		</section>
 
 		<!-- Información general, titulación y modalidad -->
-		<section class="program-detail" aria-labelledby="detail-title">
-			<div class="detail-visual" aria-label="Composición visual de desarrollo web">
-				<div class="code-screen">
-					<span class="code-bar"><i></i><i></i><i></i></span>
-					<code><b>&lt;main&gt;</b><br>&nbsp;&nbsp;<em>.creative</em> {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: <strong>#1769e8</strong>;<br>&nbsp;&nbsp;&nbsp;&nbsp;display: grid;<br>&nbsp;&nbsp;}<br><b>&lt;/main&gt;</b></code>
+		<section class="program-detail grid w-full grid-cols-1 items-center gap-10 bg-white px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 lg:px-[clamp(4rem,8vw,8rem)] lg:py-20" aria-labelledby="detail-title">
+			<div class="detail-visual" aria-label="Video de programación web">
+				<video class="detail-photo" data-program-video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1400&q=85" aria-hidden="true" tabindex="-1">
+					<source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4" type="video/mp4">
+				</video>
+				<div class="detail-video-caption" aria-hidden="true">
+					<span>Programación web</span>
 				</div>
-				<div class="wireframe-card">
-					<span></span><span></span><span></span>
-					<strong>WEB</strong>
-				</div>
-				<div class="detail-ribbon">IESTP-HUANTA</div>
 			</div>
 
-			<div class="detail-copy">
+			<div class="detail-copy mx-auto w-full max-w-2xl">
 				<p class="eyebrow">Programa de estudios</p>
 				<h2 id="detail-title">Diseño y Programación Web</h2>
 				<p>El Programa de Estudios de Diseño y Programación Web está orientado a formar profesionales con competencias sólidas en el desarrollo y diseño de sitios web. Combina creatividad y tecnología para crear soluciones digitales útiles, accesibles y preparadas para el mundo laboral.</p>
@@ -104,45 +153,79 @@
 		</section>
 
 		<!-- Módulos profesionales con imágenes -->
-		<section class="modules-section" aria-labelledby="modules-title">
+		<section class="modules-section relative w-full overflow-hidden bg-[#f0f5ee] px-0 py-16 sm:py-20 lg:py-24" aria-labelledby="modules-title">
 			<div class="modules-intro">
+				<p class="modules-eyebrow">De la idea al producto</p>
 				<p>Durante los tres años de formación aprenderás a diseñar, desarrollar y mejorar soluciones digitales para empresas y organizaciones.</p>
 				<h2 id="modules-title">Módulos Profesionales</h2>
 			</div>
 
-			<div class="modules-track">
-				<article class="module-card">
+			<div class="modules-carousel" data-modules-carousel aria-label="Carrusel de módulos profesionales">
+				<div class="modules-carousel-toolbar">
+					<p><span data-module-count>01</span><span aria-hidden="true"> / 03</span><span class="sr-only"> módulo seleccionado</span></p>
+					<div class="modules-carousel-actions">
+						<button type="button" data-module-prev aria-label="Ver módulo anterior" title="Módulo anterior">←</button>
+						<button type="button" data-module-next aria-label="Ver módulo siguiente" title="Módulo siguiente">→</button>
+					</div>
+				</div>
+				<div class="modules-track" data-module-track role="region" aria-label="Desliza para explorar los módulos" tabindex="0">
+				<article class="module-card" data-module-slide aria-roledescription="diapositiva" aria-label="Módulo 1 de 3">
 					<div class="module-image">
-						<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85" alt="Código de un sistema web en una pantalla" loading="lazy">
+						<img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=85" alt="Desarrolladora trabajando en una computadora" loading="eager" fetchpriority="high">
 						<span class="module-number">01</span>
 					</div>
+					<div class="module-copy">
+						<p class="module-kicker">Estructura · experiencia · planificación</p>
 					<h3>Módulo 1: Análisis y diseño de sistemas web</h3>
 					<p>Aprende a planificar sitios y sistemas web, organizar sus contenidos y crear diseños funcionales, seguros y fáciles de usar.</p>
+						<a href="#study-title">Ver ruta de aprendizaje <span aria-hidden="true">↗</span></a>
+					</div>
 				</article>
 
-				<article class="module-card">
+				<article class="module-card" data-module-slide aria-roledescription="diapositiva" aria-label="Módulo 2 de 3">
 					<div class="module-image">
-						<img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=85" alt="Bocetos de diseño de una interfaz digital" loading="lazy">
+						<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=900&q=85" alt="Diseño de una interfaz web en una computadora" loading="eager">
 						<span class="module-number">02</span>
 					</div>
+					<div class="module-copy">
+						<p class="module-kicker">Código · datos · aplicaciones</p>
 					<h3>Módulo 2: Desarrollo de aplicaciones web</h3>
 					<p>Desarrolla aplicaciones web completas, conecta sus componentes y realiza pruebas para entregar soluciones confiables.</p>
+						<a href="#study-title">Ver ruta de aprendizaje <span aria-hidden="true">↗</span></a>
+					</div>
 				</article>
 
-				<article class="module-card">
+				<article class="module-card" data-module-slide aria-roledescription="diapositiva" aria-label="Módulo 3 de 3">
 					<div class="module-image">
-						<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Diseño de una experiencia digital en una tableta" loading="lazy">
+						<img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=900&q=85" alt="Diseñadora revisando la experiencia de una interfaz" loading="eager">
 						<span class="module-number">03</span>
 					</div>
+					<div class="module-copy">
+						<p class="module-kicker">Interacción · accesibilidad · publicación</p>
 					<h3>Módulo 3: Diseño de servicios web</h3>
 					<p>Diseña experiencias digitales atractivas y accesibles, aplicando animación, usabilidad y experiencia del usuario.</p>
+						<a href="#study-title">Ver ruta de aprendizaje <span aria-hidden="true">↗</span></a>
+					</div>
 				</article>
+				</div>
+				<div class="modules-carousel-footer">
+					<div class="modules-carousel-dots" role="group" aria-label="Elegir módulo">
+						<button class="is-active" type="button" data-module-dot="0" aria-label="Mostrar módulo 1" aria-current="true"></button>
+						<button type="button" data-module-dot="1" aria-label="Mostrar módulo 2" aria-current="false"></button>
+						<button type="button" data-module-dot="2" aria-label="Mostrar módulo 3" aria-current="false"></button>
+					</div>
+					<p>Desliza o usa las flechas para explorar</p>
+				</div>
 			</div>
 		</section>
 
 		<!-- Perfil de egreso y competencias profesionales -->
-		<section class="graduate-profile-section" aria-labelledby="graduate-profile-title">
-			<div class="graduate-profile-heading">
+		<section class="graduate-profile-section bg-[#f8f7f2] px-5 py-16 text-[#25333c] sm:px-8 lg:px-12 lg:py-24" aria-labelledby="graduate-profile-title">
+			<figure class="graduate-profile-visual">
+				<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=85" alt="Equipo de estudiantes colaborando en un proyecto" loading="lazy">
+				<figcaption><span>01 / 03</span> Tu experiencia se convierte en oportunidades.</figcaption>
+			</figure>
+			<div class="graduate-profile-heading mx-auto mb-10 max-w-4xl text-left md:text-center">
 				<p class="eyebrow">Perfil de egreso</p>
 				<h2 id="graduate-profile-title">Lo que podrás lograr</h2>
 				<p>Explora las competencias y oportunidades que desarrollarás durante tu formación profesional.</p>
@@ -192,7 +275,7 @@
 		</section>
 
 		<!-- Sección visual de inspiración futurista -->
-		<section class="future-section" aria-labelledby="future-title">
+		<section class="future-section relative grid w-full grid-cols-1 overflow-hidden bg-gradient-to-br from-[#12353b] via-[#18514d] to-[#273c45] px-5 py-16 text-white sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-[clamp(4rem,8vw,8rem)] lg:py-24" aria-labelledby="future-title">
 			<div class="future-copy">
 				<p class="eyebrow">Más allá de la pantalla</p>
 				<h2 id="future-title">Diseña el futuro desde Huanta.</h2>
@@ -211,7 +294,7 @@
 		</section>
 
 		<!-- Perfil profesional y plan académico desplegable -->
-		<section class="study-section" aria-labelledby="study-title">
+		<section class="study-section relative w-full overflow-hidden bg-[#f7f8f4] px-5 py-16 sm:px-8 lg:px-16 lg:py-24" aria-labelledby="study-title">
 			<div class="study-heading">
 				<p class="eyebrow">Tu ruta profesional</p>
 				<h2 id="study-title">Perfil y Plan de Estudios</h2>
@@ -220,7 +303,7 @@
 
 			<div class="study-layout">
 				<article class="profile-card">
-					<img class="profile-student-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=85" alt="Estudiante desarrollando un proyecto web con una computadora" loading="lazy">
+					<img class="profile-student-image" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=85" alt="Estudiantes colaborando frente a una computadora" loading="lazy">
 					<span class="profile-orb" aria-hidden="true"></span>
 					<p class="card-label">Perfil profesional</p>
 					<h3>Diseñador y desarrollador web</h3>
@@ -231,7 +314,7 @@
 						<button type="button" class="profile-skill" data-skill="equipo">Trabajo en equipo</button>
 					</div>
 					<div class="skill-preview" data-skill-preview hidden>
-						<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85" alt="Bocetos de una interfaz digital creativa" data-skill-image loading="lazy">
+						<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Computadora preparada para desarrollar una interfaz web" data-skill-image loading="lazy">
 						<div>
 							<h4 data-skill-title>Creatividad</h4>
 							<p data-skill-description>Transformar ideas en interfaces y experiencias digitales originales, útiles y atractivas.</p>
@@ -332,7 +415,7 @@
 		</section>
 
 		<!-- Ruleta automática de testimonios -->
-		<section class="testimonials-section" aria-labelledby="testimonials-title">
+		<section class="testimonials-section relative w-full overflow-hidden bg-[#f1f5f0] px-5 py-16 sm:px-8 lg:px-16 lg:py-24" aria-labelledby="testimonials-title">
 			<div class="testimonials-heading">
 				<p class="eyebrow">Testimonios</p>
 				<h2 id="testimonials-title">Lo que dicen nuestros estudiantes</h2>
@@ -380,7 +463,7 @@
 	<div class="quick-info-modal" id="quickInfoModal" hidden>
 		<div class="quick-info-dialog" role="dialog" aria-modal="true" aria-labelledby="quickInfoTitle">
 			<button class="quick-info-close" type="button" aria-label="Cerrar información rápida">×</button>
-			<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85" alt="Estudiantes colaborando en un proyecto de desarrollo web" loading="lazy">
+			<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85" alt="Grupo de estudiantes colaborando en un proyecto académico" loading="lazy">
 			<div class="quick-info-copy">
 				<p class="eyebrow">Vista rápida</p>
 				<h3 id="quickInfoTitle">Diseño y Programación Web</h3>

@@ -9,6 +9,7 @@
     <title>IESP Huanta</title>
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/tailwind.generated.css">
     <script src="js/home.js" defer></script>
 </head>
 
@@ -68,6 +69,10 @@
         <!-- HERO -->
 
         <section id="hero" class="hero-section">
+            <div class="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden="true">
+                <img class="h-full w-full object-cover object-center opacity-75 motion-safe:animate-hero-drift motion-reduce:animate-none" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=90" alt="" fetchpriority="high">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#174ea6] via-[#174ea6]/65 to-[#174ea6]/15"></div>
+            </div>
 
             <div class="hero-copy">
                 <p class="eyebrow">Instituto de Educación Superior Público “Huanta”</p>
@@ -157,226 +162,263 @@
 
         <!-- CARRERAS -->
 
-        <section id="carreras" class="content-section cards-section">
+        <section id="carreras" class="content-section cards-section grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
 
-            <h2>Programas de Estudio</h2>
+            <h2 class="!font-sans !font-semibold !tracking-normal">Programas de Estudio</h2>
 
-            <article>
-
-                <h3>Diseño y Programación Web</h3>
-
-                <p>
-                    Desarrollo de aplicaciones web modernas.
-                </p>
-
+            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85" alt="Código de programación en una pantalla" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
+                <div class="relative z-10 p-5 text-white">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Tecnología</p>
+                    <h3 class="mb-3 text-2xl font-semibold leading-tight">Diseño y Programación Web</h3>
+                    <p class="mb-5 text-sm leading-relaxed text-white/80">Diseña interfaces y desarrolla aplicaciones web modernas para resolver necesidades reales.</p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-cyan-200" href="diseño.html">Conocer el programa <span aria-hidden="true">↗</span></a>
+                </div>
             </article>
 
-            <article>
-
-                <h3>Enfermería Técnica</h3>
-
-                <p>
-                    Formación para el sector salud.
-                </p>
-
+            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:100ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85" alt="Profesional de salud atendiendo a una persona" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
+                <div class="relative z-10 p-5 text-white">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Salud</p>
+                    <h3 class="mb-3 text-2xl font-semibold leading-tight">Enfermería Técnica</h3>
+                    <p class="mb-5 text-sm leading-relaxed text-white/80">Prepárate para brindar cuidados técnicos, seguros y humanos en servicios de salud.</p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-cyan-200" href="enfermeria.html">Conocer el programa <span aria-hidden="true">↗</span></a>
+                </div>
             </article>
 
-            <article>
-
-                <h3>Mecatrónica Automotriz</h3>
-
-                <p>
-                    Especialización en sistemas automotrices.
-                </p>
-
+            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:200ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=85" alt="Técnico revisando el motor de un automóvil" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
+                <div class="relative z-10 p-5 text-white">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Automotriz</p>
+                    <h3 class="mb-3 text-2xl font-semibold leading-tight">Mecatrónica Automotriz</h3>
+                    <p class="mb-5 text-sm leading-relaxed text-white/80">Diagnostica y mantiene sistemas mecánicos, eléctricos y electrónicos de vehículos.</p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-cyan-200" href="mecatronica.html">Conocer el programa <span aria-hidden="true">↗</span></a>
+                </div>
             </article>
 
-            <article>
-
-                <h3>Industrias Alimentarias</h3>
-
-                <p>
-                    Procesamiento y control de alimentos.
-                </p>
-
+            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:300ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85" alt="Productos de panadería preparados para su procesamiento" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
+                <div class="relative z-10 p-5 text-white">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Producción</p>
+                    <h3 class="mb-3 text-2xl font-semibold leading-tight">Industrias Alimentarias</h3>
+                    <p class="mb-5 text-sm leading-relaxed text-white/80">Procesa materias primas y controla la calidad e inocuidad de alimentos y bebidas.</p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-cyan-200" href="industrias.html">Conocer el programa <span aria-hidden="true">↗</span></a>
+                </div>
             </article>
 
-            <article>
-
-                <h3>Producción Agropecuaria</h3>
-
-                <p>
-                    Gestión de producción agrícola y pecuaria.
-                </p>
-
+            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:400ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Campos de cultivo en una zona rural" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
+                <div class="relative z-10 p-5 text-white">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Agropecuaria</p>
+                    <h3 class="mb-3 text-2xl font-semibold leading-tight">Producción Agropecuaria</h3>
+                    <p class="mb-5 text-sm leading-relaxed text-white/80">Gestiona actividades agrícolas y pecuarias con enfoque productivo y sostenible.</p>
+                    <a class="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-cyan-200" href="agropecuaria.html">Conocer el programa <span aria-hidden="true">↗</span></a>
+                </div>
             </article>
 
         </section>
 
         <!-- SERVICIOS -->
 
-        <section id="servicios" class="content-section cards-section services-section">
+        <section id="servicios" class="content-section cards-section services-section grid-cols-1 md:grid-cols-3">
 
-            <h2>Servicios Institucionales</h2>
+            <h2 class="!font-sans !font-semibold !tracking-normal">Servicios Institucionales</h2>
 
-            <article>
-
-                <h3>Biblioteca</h3>
-
-                <p>
-                    Acceso a material académico.
-                </p>
-
+            <article class="group relative isolate flex min-h-[16rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=85" alt="Estanterías con libros en una biblioteca" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10" aria-hidden="true"></div>
+                <div class="relative z-10 p-6 text-white">
+                    <h3 class="mb-2 text-2xl font-semibold">Biblioteca</h3>
+                    <p class="text-sm leading-relaxed text-white/85">Acceso a libros y recursos académicos para acompañar tu formación.</p>
+                </div>
             </article>
 
-            <article>
-
-                <h3>Laboratorios</h3>
-
-                <p>
-                    Ambientes equipados para prácticas.
-                </p>
-
+            <article class="group relative isolate flex min-h-[16rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:100ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1581093458791-9d15482442f7?auto=format&fit=crop&w=900&q=85" alt="Equipos de laboratorio para realizar prácticas" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10" aria-hidden="true"></div>
+                <div class="relative z-10 p-6 text-white">
+                    <h3 class="mb-2 text-2xl font-semibold">Laboratorios</h3>
+                    <p class="text-sm leading-relaxed text-white/85">Ambientes equipados para experimentar y aprender haciendo.</p>
+                </div>
             </article>
 
-            <article>
-
-                <h3>Red Telemática</h3>
-
-                <p>
-                    Infraestructura tecnológica moderna.
-                </p>
-
+            <article class="group relative isolate flex min-h-[16rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:200ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85" alt="Componentes electrónicos de infraestructura tecnológica" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10" aria-hidden="true"></div>
+                <div class="relative z-10 p-6 text-white">
+                    <h3 class="mb-2 text-2xl font-semibold">Red Telemática</h3>
+                    <p class="text-sm leading-relaxed text-white/85">Infraestructura tecnológica para aprender, investigar y conectarte.</p>
+                </div>
             </article>
 
         </section>
 
         <!-- NOTICIAS -->
-
-        <section id="noticias" class="content-section split-section">
-
-            <h2>Últimas Noticias</h2>
-
-            <article>
-
-                <h3>Inicio de Matrículas</h3>
-
-                <p>
-                    Matrículas abiertas para el nuevo periodo académico.
-                </p>
-
-            </article>
-
-            <article>
-
-                <h3>Feria Tecnológica</h3>
-
-                <p>
-                    Participación de estudiantes con proyectos innovadores.
-                </p>
-
-            </article>
-
+        <section id="noticias" class="relative overflow-hidden bg-[#f3f5ef] px-5 py-20 sm:px-8 lg:px-12">
+            <div class="pointer-events-none absolute -right-20 top-10 h-64 w-96 rotate-12 border border-emerald-900/10 motion-safe:animate-shape-drift" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-7xl">
+                <div class="mb-10 flex flex-wrap items-end justify-between gap-5">
+                    <div>
+                        <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-rose-700">Lo que sucede en Huanta</p>
+                        <h2 class="max-w-2xl font-serif text-4xl leading-tight text-slate-950 sm:text-5xl">Últimas noticias</h2>
+                    </div>
+                    <span class="border-b-2 border-rose-500 pb-2 text-sm font-semibold text-slate-600">Actualidad institucional</span>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2">
+                    <article data-tilt class="group relative isolate min-h-[24rem] overflow-hidden rounded-lg bg-slate-950 shadow-xl transition-[transform,box-shadow] duration-500 hover:shadow-2xl motion-safe:animate-card-enter motion-reduce:animate-none [transform:perspective(1000px)_rotateX(var(--rotate-x,0deg))_rotateY(var(--rotate-y,0deg))]">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85" alt="Estudiantes reunidos en una actividad académica" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/55 to-transparent" aria-hidden="true"></div>
+                        <span class="absolute left-5 top-5 rounded-sm bg-amber-300 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-950">Admisión</span>
+                        <div class="relative flex min-h-[24rem] flex-col justify-end p-6 text-white sm:p-8">
+                            <p class="mb-2 text-sm font-medium text-amber-200">Nuevo periodo académico</p>
+                            <h3 class="mb-3 max-w-lg font-serif text-3xl leading-tight sm:text-4xl">Inicio de Matrículas</h3>
+                            <p class="max-w-lg text-sm leading-relaxed text-white/85">Matrículas abiertas para iniciar tu formación técnica y construir nuevas oportunidades.</p>
+                        </div>
+                    </article>
+                    <article data-tilt class="group relative isolate min-h-[24rem] overflow-hidden rounded-lg bg-slate-950 shadow-xl transition-[transform,box-shadow] duration-500 hover:shadow-2xl motion-safe:animate-card-enter motion-safe:[animation-delay:140ms] motion-reduce:animate-none [transform:perspective(1000px)_rotateX(var(--rotate-x,0deg))_rotateY(var(--rotate-y,0deg))]">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85" alt="Equipo de estudiantes colaborando en un proyecto tecnológico" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/55 to-transparent" aria-hidden="true"></div>
+                        <span class="absolute left-5 top-5 rounded-sm bg-teal-200 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-950">Innovación</span>
+                        <div class="relative flex min-h-[24rem] flex-col justify-end p-6 text-white sm:p-8">
+                            <p class="mb-2 text-sm font-medium text-teal-200">Ideas que se convierten en proyectos</p>
+                            <h3 class="mb-3 max-w-lg font-serif text-3xl leading-tight sm:text-4xl">Feria Tecnológica</h3>
+                            <p class="max-w-lg text-sm leading-relaxed text-white/85">Estudiantes presentan soluciones, prototipos y proyectos creados durante su formación.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
-
         <!-- EVENTOS -->
 
-        <section id="eventos" class="content-section split-section events-section">
-
-            <h2>Eventos</h2>
-
-            <article>
-
-                <h3>Aniversario Institucional</h3>
-
-                <p>
-                    Actividades conmemorativas del instituto.
-                </p>
-
-            </article>
-
-            <article>
-
-                <h3>Concurso de Innovación</h3>
-
-                <p>
-                    Presentación de proyectos tecnológicos.
-                </p>
-
-            </article>
-
-        </section>
-
-        <!-- GALERIA -->
-
-        <section id="galeria" class="content-section gallery-section">
-
-            <h2>Galería Institucional</h2>
-
-            <div class="gallery-grid" aria-label="Momentos de la vida institucional">
-                <div class="gallery-tile gallery-tile-tall"><span>Aprendizaje práctico</span></div>
-                <div class="gallery-tile"><span>Comunidad estudiantil</span></div>
-                <div class="gallery-tile"><span>Innovación con propósito</span></div>
+        <section id="eventos" class="relative overflow-hidden bg-[#143c3b] px-5 py-20 text-white sm:px-8 lg:px-12">
+            <div class="relative mx-auto max-w-7xl">
+                <div class="mb-10 grid gap-5 md:grid-cols-[1fr_auto] md:items-end">
+                    <div>
+                        <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-lime-300">Encuentros y experiencias</p>
+                        <h2 class="max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">Aprender también es encontrarnos.</h2>
+                    </div>
+                    <div class="hidden h-20 w-20 rotate-12 border-2 border-lime-300/60 md:block motion-safe:animate-shape-drift" aria-hidden="true"></div>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2">
+                    <article data-tilt class="group relative isolate min-h-[22rem] overflow-hidden rounded-lg bg-slate-950 shadow-xl transition-[transform,box-shadow] duration-500 hover:shadow-2xl motion-safe:animate-card-enter motion-reduce:animate-none [transform:perspective(1000px)_rotateX(var(--rotate-x,0deg))_rotateY(var(--rotate-y,0deg))]">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85" alt="Jóvenes compartiendo una actividad en comunidad" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#102b2a] via-[#102b2a]/40 to-transparent" aria-hidden="true"></div>
+                        <div class="relative flex min-h-[22rem] flex-col justify-end p-6 sm:p-8">
+                            <span class="mb-3 w-fit border border-lime-200/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-lime-100">Comunidad</span>
+                            <h3 class="mb-2 font-serif text-3xl">Aniversario Institucional</h3>
+                            <p class="max-w-lg text-sm leading-relaxed text-white/85">Celebramos la historia, el talento y el compromiso de nuestra comunidad educativa.</p>
+                        </div>
+                    </article>
+                    <article data-tilt class="group relative isolate min-h-[22rem] overflow-hidden rounded-lg bg-slate-950 shadow-xl transition-[transform,box-shadow] duration-500 hover:shadow-2xl motion-safe:animate-card-enter motion-safe:[animation-delay:140ms] motion-reduce:animate-none [transform:perspective(1000px)_rotateX(var(--rotate-x,0deg))_rotateY(var(--rotate-y,0deg))]">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=85" alt="Estudiante trabajando con componentes electrónicos" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#102b2a] via-[#102b2a]/40 to-transparent" aria-hidden="true"></div>
+                        <div class="relative flex min-h-[22rem] flex-col justify-end p-6 sm:p-8">
+                            <span class="mb-3 w-fit border border-orange-200/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-orange-100">Reto estudiantil</span>
+                            <h3 class="mb-2 font-serif text-3xl">Concurso de Innovación</h3>
+                            <p class="max-w-lg text-sm leading-relaxed text-white/85">Proyectos tecnológicos que responden a desafíos reales de nuestra comunidad.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-
         </section>
-
+        <!-- GALERIA -->
+        <section id="galeria" class="relative isolate overflow-hidden bg-[#101f35] px-5 py-20 text-white sm:px-8 lg:px-12">
+            <div class="pointer-events-none absolute -left-20 top-24 h-72 w-[34rem] -rotate-12 border border-cyan-200/15 motion-safe:animate-shape-drift" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-7xl">
+                <div class="mb-10 flex flex-wrap items-end justify-between gap-5">
+                    <div>
+                        <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Así se vive el instituto</p>
+                        <h2 class="font-serif text-4xl leading-tight sm:text-5xl">Galería Institucional</h2>
+                    </div>
+                    <span class="border-b-2 border-orange-400 pb-2 text-sm font-semibold text-slate-300">Ideas en acción</span>
+                </div>
+                <div class="grid gap-4 md:auto-rows-[12rem] md:grid-cols-6" aria-label="Momentos de la vida institucional">
+                    <figure class="group relative isolate min-h-[22rem] overflow-hidden rounded-lg border border-white/15 bg-slate-900 md:col-span-3 md:row-span-2 md:min-h-0 motion-safe:animate-card-enter">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=85" alt="Estudiante realizando una práctica técnica con equipamiento" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-transparent" aria-hidden="true"></div>
+                        <figcaption class="absolute bottom-0 left-0 max-w-xl p-6 sm:p-8">
+                            <span class="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Aprender haciendo</span>
+                            <span class="font-serif text-3xl sm:text-4xl">Aprendizaje práctico</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative isolate min-h-[16rem] overflow-hidden rounded-lg border border-white/15 bg-slate-900 md:col-span-3 motion-safe:animate-card-enter motion-safe:[animation-delay:120ms]">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85" alt="Estudiantes compartiendo una experiencia en comunidad" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/35 to-transparent" aria-hidden="true"></div>
+                        <figcaption class="absolute inset-y-0 left-0 flex max-w-md flex-col justify-center p-6">
+                            <span class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-lime-200">Conexiones que inspiran</span>
+                            <span class="font-serif text-2xl sm:text-3xl">Comunidad estudiantil</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative isolate min-h-[16rem] overflow-hidden rounded-lg border border-white/15 bg-slate-900 md:col-span-2 motion-safe:animate-card-enter motion-safe:[animation-delay:220ms]">
+                        <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85" alt="Proyecto estudiantil con componentes tecnológicos" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" aria-hidden="true"></div>
+                        <figcaption class="absolute bottom-0 left-0 p-5">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-[0.18em] text-orange-200">Creatividad técnica</span>
+                            <span class="font-serif text-2xl">Innovación</span>
+                        </figcaption>
+                    </figure>
+                    <div class="relative hidden overflow-hidden rounded-lg bg-orange-400 p-6 text-slate-950 md:col-span-1 md:flex md:flex-col md:justify-between motion-safe:animate-card-enter motion-safe:[animation-delay:320ms]">
+                        <span class="text-xs font-bold uppercase tracking-[0.16em]">IESP Huanta</span>
+                        <span class="font-serif text-4xl leading-none">05<br>rutas<br>para crecer</span>
+                        <span class="text-sm font-semibold">Tu futuro empieza aquí</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- CONTACTO -->
 
         <section id="contacto" class="content-section contact-section">
-
             <h2>Contáctanos</h2>
-
             <form>
-
                 <label>Nombre<input type="text" placeholder="Tu nombre" required></label>
-
                 <label>Correo electrónico<input type="email" placeholder="tu@correo.com" required></label>
-
                 <label class="form-wide">Mensaje<textarea placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea></label>
-
                 <button class="button button-primary form-wide" type="submit">Enviar consulta <span aria-hidden="true">&#8594;</span></button>
-
             </form>
-
         </section>
-
     </main>
 
-    <!-- FOOTER -->
-
     <section id="pie-pagina" class="footer-section" aria-label="Pie de página">
-        <footer class="site-footer site-footer-home">
+        <footer class="site-footer">
+            <section class="footer-main">
+                <section class="footer-brand">
+                    <img class="footer-logo-image" src="assets/logo-huanta.png" alt="IESP Huanta">
+                    <p>Instituto de Educación Superior Público “Huanta”</p>
+                </section>
 
-        <section class="footer-main">
-            <section class="footer-brand">
-                <img class="footer-logo-image" src="assets/logo-huanta.png" alt="IESP Huanta">
-                <p>Instituto de Educación Superior Público “Huanta”</p>
+                <section class="footer-column">
+                    <h3>Explora</h3>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#carreras">Programas de estudio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#noticias">Noticias</a>
+                </section>
+
+                <section class="footer-column">
+                    <h3>Información</h3>
+                    <p>Jr. Córdoba N.º 650<br>Huanta, Ayacucho - Perú</p>
+                    <a href="tel:+5166322296">(066) 322296</a>
+                    <a href="mailto:informes@iestphuanta.edu.pe">informes@iestphuanta.edu.pe</a>
+                </section>
+
+                <section class="footer-column footer-connect">
+                    <h3>Conecta</h3>
+                    <p>Conoce nuestras oportunidades de formación profesional.</p>
+                    <a class="footer-social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <span aria-hidden="true">f</span> Facebook
+                    </a>
+                    <a href="#contacto">Contáctanos</a>
+                </section>
             </section>
 
-            <section class="footer-column">
-                <h3>Facebook</h3>
-                <a class="footer-social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                    <span aria-hidden="true">f</span> Facebook
-                </a>
+            <section class="footer-bottom">
+                <p>&copy; 2026 Instituto de Educación Superior Público “Huanta”. Todos los derechos reservados.</p>
             </section>
-
-            <section class="footer-column">
-                <h3>Información</h3>
-                <p><span class="footer-icon" aria-hidden="true">⌖</span> Jr. Córdoba N.º 650</p>
-                <a href="tel:+5166322296"><span class="footer-icon" aria-hidden="true">◔</span> Teléfono: (066) 322296</a>
-            </section>
-
-            <section class="footer-column footer-connect">
-                <h3>Horario de atención</h3>
-                <p>Lun – Vier: 7:30 am – 1:15 pm</p>
-            </section>
-        </section>
-
-        <section class="footer-bottom">
-            <p>&copy; 2026 Instituto de Educación Superior Público “Huanta”</p>
-        </section>
-
         </footer>
     </section>
 

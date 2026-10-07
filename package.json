@@ -3,5 +3,9 @@
     "autoprefixer": "^10.5.5",
     "postcss": "^8.5.28",
     "tailwindcss": "^3.4.19"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind.generated.css",
+    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind.generated.css --watch"
   }
 }

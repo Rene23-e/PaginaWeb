@@ -2,7 +2,7 @@ const pageSections = [...document.querySelectorAll('main section[id]')];
 const navigationLinks = [...document.querySelectorAll('.nav-links a')];
 const animatedSections = [...document.querySelectorAll('main section:not(#hero), .gallery-tile')];
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const interactiveCards = [...document.querySelectorAll('.cards-section article, .split-section article, .gallery-tile')];
+const interactiveCards = [...document.querySelectorAll('.cards-section article, [data-tilt]')];
 const programsToggle = document.querySelector('.nav-programs-toggle');
 const programsMenu = document.querySelector('#programs-menu');
 
