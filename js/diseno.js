@@ -29,7 +29,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-const revealTargets = [...document.querySelectorAll('.program-detail, .modules-intro, .modules-carousel, .graduate-profile-visual, .graduate-profile-heading, .profile-tabs, .future-copy, .orbit-scene, .study-heading, .profile-card, .semester-plan, .testimonials-heading, .testimonial-roulette')];
+const revealTargets = [...document.querySelectorAll('.program-detail, .graduate-profile-visual, .graduate-profile-heading, .profile-tabs, .future-copy, .orbit-scene, .study-heading, .profile-card, .semester-plan, .testimonials-heading, .testimonial-roulette')];
 
 if (prefersReducedMotion || document.hidden || !('IntersectionObserver' in window)) {
     revealTargets.forEach((target) => target.classList.add('page-reveal-visible'));
@@ -48,78 +48,6 @@ if (prefersReducedMotion || document.hidden || !('IntersectionObserver' in windo
         target.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
         revealObserver.observe(target);
     });
-}
-
-const modulesCarousel = document.querySelector('[data-modules-carousel]');
-const modulesTrack = modulesCarousel?.querySelector('[data-module-track]');
-const moduleSlides = [...(modulesTrack?.querySelectorAll('[data-module-slide]') || [])];
-const moduleDots = [...(modulesCarousel?.querySelectorAll('[data-module-dot]') || [])];
-const moduleCount = modulesCarousel?.querySelector('[data-module-count]');
-let activeModule = 0;
-let moduleTimer;
-
-if (modulesCarousel && modulesTrack && moduleSlides.length) {
-    const renderModuleState = (index) => {
-        activeModule = index;
-        moduleSlides.forEach((slide, slideIndex) => {
-            slide.classList.toggle('is-active', slideIndex === activeModule);
-            slide.setAttribute('aria-label', `Módulo ${slideIndex + 1} de ${moduleSlides.length}`);
-        });
-        moduleDots.forEach((dot, dotIndex) => {
-            const isActive = dotIndex === activeModule;
-            dot.classList.toggle('is-active', isActive);
-            dot.setAttribute('aria-current', String(isActive));
-        });
-        if (moduleCount) {
-            moduleCount.textContent = String(activeModule + 1).padStart(2, '0');
-        }
-    };
-
-    const goToModule = (index) => {
-        const nextIndex = (index + moduleSlides.length) % moduleSlides.length;
-        const slide = moduleSlides[nextIndex];
-        const offset = slide.getBoundingClientRect().left - modulesTrack.getBoundingClientRect().left + modulesTrack.scrollLeft - (modulesTrack.clientWidth - slide.offsetWidth) / 2;
-        renderModuleState(nextIndex);
-        if (prefersReducedMotion || document.hidden) {
-            modulesTrack.scrollLeft = offset;
-        } else {
-            modulesTrack.scrollTo({ left: offset, behavior: 'smooth' });
-        }
-    };
-
-    const syncModuleState = () => {
-        const trackCenter = modulesTrack.getBoundingClientRect().left + modulesTrack.clientWidth / 2;
-        const nearestIndex = moduleSlides.reduce((nearest, slide, index) => {
-            const slideCenter = slide.getBoundingClientRect().left + slide.getBoundingClientRect().width / 2;
-            const nearestCenter = moduleSlides[nearest].getBoundingClientRect().left + moduleSlides[nearest].getBoundingClientRect().width / 2;
-            return Math.abs(slideCenter - trackCenter) < Math.abs(nearestCenter - trackCenter) ? index : nearest;
-        }, 0);
-        renderModuleState(nearestIndex);
-    };
-
-    const pauseModuleRotation = () => window.clearInterval(moduleTimer);
-    const startModuleRotation = () => {
-        pauseModuleRotation();
-        if (prefersReducedMotion || document.hidden) {
-            return;
-        }
-        moduleTimer = window.setInterval(() => goToModule(activeModule + 1), 7200);
-    };
-
-    modulesCarousel.querySelector('[data-module-prev]')?.addEventListener('click', () => goToModule(activeModule - 1));
-    modulesCarousel.querySelector('[data-module-next]')?.addEventListener('click', () => goToModule(activeModule + 1));
-    moduleDots.forEach((dot) => dot.addEventListener('click', () => goToModule(Number(dot.dataset.moduleDot))));
-    modulesTrack.addEventListener('scroll', syncModuleState, { passive: true });
-    modulesCarousel.addEventListener('pointerenter', pauseModuleRotation);
-    modulesCarousel.addEventListener('pointerleave', startModuleRotation);
-    modulesCarousel.addEventListener('focusin', pauseModuleRotation);
-    modulesCarousel.addEventListener('focusout', (event) => {
-        if (!modulesCarousel.contains(event.relatedTarget)) {
-            startModuleRotation();
-        }
-    });
-    document.addEventListener('visibilitychange', startModuleRotation);
-    startModuleRotation();
 }
 
 // Contenido que aparece en la ruleta de testimonios.
