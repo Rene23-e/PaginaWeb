@@ -69,26 +69,38 @@
         <!-- HERO -->
 
         <section id="hero" class="hero-section">
-            <div class="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden="true">
-                <img class="h-full w-full object-cover object-center opacity-75 motion-safe:animate-hero-drift motion-reduce:animate-none" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=90" alt="" fetchpriority="high">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#174ea6] via-[#174ea6]/65 to-[#174ea6]/15"></div>
-            </div>
-
-            <div class="hero-copy">
-                <p class="eyebrow">Instituto de Educación Superior Público “Huanta”</p>
-                <h1>Construye tu futuro con formación de calidad</h1>
-
-                <p class="hero-lead">Aprende haciendo, innova con propósito y prepárate para transformar tu comunidad desde Huanta.</p>
-
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#carreras">Ver programas <span aria-hidden="true">&#8594;</span></a>
-                    <a class="button button-quiet" href="#contacto">Solicitar información</a>
+            <figure class="hero-showcase" data-hero-showcase aria-label="Estudiantes y programas de estudio">
+                <div class="hero-showcase-image-frame">
+                    <img data-hero-image src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2200&q=90" alt="Estudiantes colaborando en un proyecto académico en la biblioteca" fetchpriority="high">
                 </div>
-            </div>
-            <div class="hero-note">
-                <span class="hero-note-number">01</span>
-                <p>Una institución que acompaña tu crecimiento profesional.</p>
-            </div>
+                <div class="hero-showcase-shade" aria-hidden="true"></div>
+                <figcaption class="hero-showcase-caption">
+                    <span class="hero-showcase-kicker" data-hero-category>IESP Huanta · educación pública</span>
+                    <h1 class="hero-showcase-title" data-hero-title>Piensa en grande. Construye tu futuro.</h1>
+                    <p class="hero-showcase-description">Aprende haciendo, innova con propósito y prepárate para transformar tu comunidad desde Huanta.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#carreras">Ver programas <span aria-hidden="true">&#8594;</span></a>
+                        <a class="button button-quiet" href="#contacto">Solicitar información</a>
+                    </div>
+                </figcaption>
+                <div class="hero-showcase-controls" role="group" aria-label="Explora los programas de estudio">
+                    <a data-hero-slide href="diseño.html" data-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=90" data-alt="Computadora preparada para desarrollar una interfaz web" data-category="Diseño y tecnología" data-title="Diseña. Programa. Hazlo realidad." aria-label="Conoce Diseño y Programación Web">
+                        <span class="hero-program-icon hero-icon-design" aria-hidden="true">&lt;/&gt;</span><span>Diseño y<br>Programación Web</span>
+                    </a>
+                    <a data-hero-slide href="enfermeria.html" data-image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=90" data-alt="Profesional de salud brindando atención a una persona" data-category="Salud" data-title="Cuida con conocimiento. Acompaña con vocación." aria-label="Conoce Enfermería Técnica">
+                        <span class="hero-program-icon hero-icon-health" aria-hidden="true">✚</span><span>Enfermería<br>Técnica</span>
+                    </a>
+                    <a data-hero-slide href="mecatronica.html" data-image="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=90" data-alt="Motor de automóvil durante una inspección mecánica" data-category="Tecnología automotriz" data-title="Diagnostica el presente. Impulsa el futuro." aria-label="Conoce Mecatrónica Automotriz">
+                        <span class="hero-program-icon hero-icon-auto" aria-hidden="true">⚙</span><span>Mecatrónica<br>Automotriz</span>
+                    </a>
+                    <a data-hero-slide href="industrias.html" data-image="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=90" data-alt="Ingredientes frescos para la producción de alimentos" data-category="Alimentos y bebidas" data-title="Transforma ingredientes en productos de calidad." aria-label="Conoce Industrias de Alimentos y Bebidas">
+                        <span class="hero-program-icon hero-icon-food" aria-hidden="true">◈</span><span>Industrias de<br>Alimentos y Bebidas</span>
+                    </a>
+                    <a data-hero-slide href="agropecuaria.html" data-image="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=90" data-alt="Campos de cultivo y praderas agrícolas" data-category="Agricultura y ganadería" data-title="Cultiva oportunidades. Impulsa tu comunidad." aria-label="Conoce Producción Agropecuaria">
+                        <span class="hero-program-icon hero-icon-agro" aria-hidden="true">✦</span><span>Producción<br>Agropecuaria</span>
+                    </a>
+                </div>
+            </figure>
 
         </section>
 
@@ -162,12 +174,25 @@
 
         <!-- CARRERAS -->
 
-        <section id="carreras" class="content-section cards-section grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <section id="carreras" class="content-section cards-section grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
-            <h2 class="!font-sans !font-semibold !tracking-normal">Programas de Estudio</h2>
+            <div class="programs-heading">
+                <div>
+                    <p class="eyebrow">Encuentra tu camino</p>
+                    <h2 class="!font-sans !font-semibold !tracking-normal">Programas de Estudio</h2>
+                    <p>Explora las áreas de formación y descubre dónde puede comenzar tu próximo proyecto.</p>
+                </div>
+                <span class="program-count" data-program-count aria-live="polite">5 programas</span>
+            </div>
+            <div class="program-filters" role="group" aria-label="Filtrar programas por área">
+                <button type="button" data-program-filter="all" aria-pressed="true">Todos</button>
+                <button type="button" data-program-filter="technology" aria-pressed="false">Tecnología</button>
+                <button type="button" data-program-filter="health" aria-pressed="false">Salud</button>
+                <button type="button" data-program-filter="production" aria-pressed="false">Producción</button>
+            </div>
 
-            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
-                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85" alt="Código de programación en una pantalla" loading="lazy">
+            <article data-program-card data-category="technology" class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="Computadora y espacio de trabajo para desarrollo web" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
                 <div class="relative z-10 p-5 text-white">
                     <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Tecnología</p>
@@ -177,7 +202,7 @@
                 </div>
             </article>
 
-            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:100ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+            <article data-program-card data-category="health" class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:100ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
                 <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85" alt="Profesional de salud atendiendo a una persona" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
                 <div class="relative z-10 p-5 text-white">
@@ -188,8 +213,8 @@
                 </div>
             </article>
 
-            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:200ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
-                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=85" alt="Técnico revisando el motor de un automóvil" loading="lazy">
+            <article data-program-card data-category="technology" class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:200ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=85" alt="Motor de automóvil durante una inspección mecánica" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
                 <div class="relative z-10 p-5 text-white">
                     <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Automotriz</p>
@@ -199,8 +224,8 @@
                 </div>
             </article>
 
-            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:300ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
-                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85" alt="Productos de panadería preparados para su procesamiento" loading="lazy">
+            <article data-program-card data-category="production" class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:300ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Ingredientes frescos para la producción de alimentos" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
                 <div class="relative z-10 p-5 text-white">
                     <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Producción</p>
@@ -210,8 +235,8 @@
                 </div>
             </article>
 
-            <article class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:400ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
-                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Campos de cultivo en una zona rural" loading="lazy">
+            <article data-program-card data-category="production" class="group relative isolate flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-lg border border-white/30 bg-slate-950 shadow-lg transition duration-500 [animation-delay:400ms] motion-safe:animate-card-enter motion-safe:hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                <img class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=85" alt="Paisaje verde de una zona de producción agropecuaria" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/10"></div>
                 <div class="relative z-10 p-5 text-white">
                     <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Agropecuaria</p>

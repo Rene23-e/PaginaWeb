@@ -122,14 +122,21 @@
 
 		<!-- Información general, titulación y modalidad -->
 		<section class="program-detail grid w-full grid-cols-1 items-center gap-10 bg-white px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 lg:px-[clamp(4rem,8vw,8rem)] lg:py-20" aria-labelledby="detail-title">
-			<div class="detail-visual" aria-label="Video de programación web">
-				<video class="detail-photo" data-program-video muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1400&q=85" aria-hidden="true" tabindex="-1">
-						<source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4" type="video/mp4">
-					</video>
-					<div class="detail-video-caption" aria-hidden="true">
-						<span>Programación web</span>
-					</div>
+			<div class="group relative isolate min-h-[24rem] overflow-hidden bg-slate-950 sm:min-h-[28rem] lg:min-h-[31rem]" aria-label="Video de arte digital abstracto">
+				<video class="absolute inset-0 h-full w-full object-cover transition duration-1000 ease-out group-hover:-translate-y-2 group-hover:translate-x-1 group-hover:rotate-1 group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:transform-none" data-program-video muted loop playsinline preload="none" poster="https://images.pexels.com/videos/36521857/abstract-abstract-animation-abstract-background-animation-36521857.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" aria-hidden="true" tabindex="-1">
+					<source src="https://videos.pexels.com/video-files/36521857/15486536_1920_1080_24fps.mp4" type="video/mp4">
+				</video>
+				<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-indigo-950/10 to-fuchsia-950/10 transition-colors duration-700 group-hover:from-slate-950/90 group-hover:via-indigo-950/25 group-hover:to-fuchsia-900/20" aria-hidden="true"></div>
+				<div class="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/35 transition duration-700 ease-out group-hover:rotate-12 group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:rotate-0 motion-reduce:group-hover:scale-100 sm:h-80 sm:w-80" aria-hidden="true"></div>
+				<div class="pointer-events-none absolute right-8 top-8 h-20 w-20 rotate-12 rounded-2xl border border-fuchsia-200/50 bg-fuchsia-300/10 backdrop-blur-sm transition duration-700 ease-out group-hover:-translate-x-5 group-hover:translate-y-5 group-hover:-rotate-6 group-hover:scale-125 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 motion-reduce:group-hover:translate-y-0 motion-reduce:group-hover:rotate-12 motion-reduce:group-hover:scale-100 sm:right-12 sm:top-12 sm:h-28 sm:w-28" aria-hidden="true"></div>
+				<div class="absolute bottom-6 left-6 z-10 flex items-center gap-3 rounded-full border border-white/30 bg-slate-950/60 px-4 py-3 text-white shadow-xl backdrop-blur-md transition duration-500 ease-out group-hover:-translate-y-2 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:transform-none sm:bottom-8 sm:left-8">
+					<span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+						<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-fuchsia-300 opacity-75 motion-reduce:animate-none"></span>
+						<span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-fuchsia-200"></span>
+					</span>
+					<span class="text-xs font-extrabold uppercase tracking-[0.16em] text-fuchsia-100 sm:text-sm">Arte digital abstracto</span>
 				</div>
+			</div>
 
 				<div class="detail-copy mx-auto w-full max-w-2xl">
 					<p class="eyebrow">Programa de estudios</p>

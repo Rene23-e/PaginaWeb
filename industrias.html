@@ -1,4 +1,519 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Industrias de Alimentos y Bebidas | IESP Huanta</title><link rel="stylesheet" href="css/diseno.css"><link rel="stylesheet" href="css/footer.css"><link rel="stylesheet" href="css/tailwind.generated.css"></head>
-<body><div class="contact-bar"><span><b>☎</b> (066) 322296</span><span><b>⌖</b> Jr. Córdoba N.º 650</span><span><b>✉</b> informes@iestphuanta.edu.pe</span></div><header class="site-header"><a class="brand" href="index.html"><img src="assets/logo-huanta.png" alt="IESP Huanta"></a><nav><a href="index.html">Inicio</a><a class="active" href="industrias.html">Industrias de Alimentos y Bebidas</a><a href="diseño.html">Programas de estudio</a><a href="index.html#contacto">Contacto</a></nav></header><main class="career-page relative isolate flex min-h-[calc(100svh-9rem)] items-end overflow-hidden bg-slate-950 px-0 py-0 text-left"><img class="career-photo" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=90" alt="Productos alimentarios preparados para su procesamiento" fetchpriority="high"><div class="career-shade" aria-hidden="true"></div><div class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-12 pt-28 sm:px-10 sm:pb-16 lg:px-14"><div class="max-w-4xl"><p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Programa de estudios · Producción</p><h1 class="mb-6 max-w-4xl text-5xl font-semibold leading-[0.95] text-white md:text-7xl">Industrias de Alimentos y Bebidas</h1><p class="max-w-3xl text-base leading-relaxed text-white/85 md:text-xl">Aprende a transformar materias primas en productos alimentarios seguros, innovadores y de calidad.</p><div class="mt-10 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-5 border-t border-white/25 pt-5 sm:grid-cols-3"><div><p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200">Aprenderás</p><p class="mt-2 text-sm text-white/90">Transformación de alimentos</p></div><div><p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200">Desarrollarás</p><p class="mt-2 text-sm text-white/90">Control de procesos</p></div><div><p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200">Aportarás</p><p class="mt-2 text-sm text-white/90">Calidad e inocuidad</p></div></div><a class="future-button mt-8 inline-flex" href="index.html#contacto">Solicitar información <span aria-hidden="true">↗</span></a></div></div></main></body></html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Industrias de Alimentos y Bebidas | IESP Huanta</title>
+	<link rel="stylesheet" href="css/diseno.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/tailwind.generated.css">
+</head>
+
+<body class="bg-[#f7f8f4] text-[#202b39] antialiased selection:bg-lime-200">
+	<!-- Datos de contacto institucional -->
+	<div class="contact-bar" aria-label="Información de contacto">
+		<span><b aria-hidden="true">☎</b> (066) 322296</span>
+		<span><b aria-hidden="true">⌖</b> Jr. Córdoba N.º 650</span>
+		<span><b aria-hidden="true">✉</b> contactos@iestphuanta.edu.pe</span>
+		<span aria-label="Facebook">f</span>
+	</div>
+
+	<!-- Navegación principal -->
+	<header class="site-header site-header-reference">
+		<a class="brand" href="index.html" aria-label="Volver al inicio">
+			<img src="assets/logo-huanta.png" alt="IESP Huanta">
+		</a>
+		<button class="mobile-menu-trigger" type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú">
+			<span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+			<span data-menu-label>Menú</span>
+		</button>
+		<nav id="site-navigation" aria-label="Navegación principal">
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Nosotros <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#nosotros"><span>01</span> Nuestra institución</a>
+					<a href="index.html#nosotros"><span>02</span> Misión y visión</a>
+					<a href="index.html#estadisticas"><span>03</span> Instituto licenciado</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle active">Programas de estudios <span aria-hidden="true">⌄</span></summary>
+				<div id="programs-menu" class="nav-programs-menu">
+					<a href="diseño.html"><span>⌘</span> Diseño y Programación Web</a>
+					<a href="enfermeria.html"><span>✚</span> Enfermería Técnica</a>
+					<a class="current-program" href="industrias.html" aria-current="page"><span>◈</span> Industrias de Alimentos y Bebidas</a>
+					<a href="mecatronica.html"><span>⚙</span> Mecatrónica Automotriz</a>
+					<a href="agropecuaria.html"><span>✦</span> Producción Agropecuaria</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Admisión y Matrícula <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#noticias"><span>01</span> Matrícula</a>
+					<a href="index.html#contacto"><span>02</span> Solicitar información</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Transparencia <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#estadisticas"><span>01</span> Estadísticas institucionales</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Trámite <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#contacto"><span>01</span> Mesa de partes y consultas</a>
+				</div>
+			</details>
+			<a href="index.html#contacto">Contáctanos</a>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Servicios <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html#servicios"><span>01</span> Biblioteca</a>
+					<a href="index.html#servicios"><span>02</span> Laboratorios</a>
+					<a href="index.html#servicios"><span>03</span> Red telemática</a>
+				</div>
+			</details>
+			<details class="nav-programs">
+				<summary class="nav-programs-toggle">Otras páginas <span aria-hidden="true">⌄</span></summary>
+				<div class="nav-programs-menu">
+					<a href="index.html"><span>01</span> Página principal</a>
+					<a href="index.html#galeria"><span>02</span> Galería institucional</a>
+				</div>
+			</details>
+		</nav>
+	</header>
+
+	<button class="quick-trigger" type="button" data-quick-open aria-label="Abrir información rápida">
+		<span class="quick-trigger-key">Q</span>
+		<span class="quick-trigger-text">Vista rápida</span>
+	</button>
+
+	<main>
+		<!-- Presentación del programa de estudios -->
+		<section class="program-hero relative grid min-h-[calc(100svh-8rem)] grid-cols-1 overflow-hidden bg-[#102a56] text-white lg:min-h-[calc(100svh-13rem)] lg:grid-cols-[0.95fr_1.05fr]" aria-labelledby="program-title">
+			<div class="group absolute inset-0 min-h-full overflow-hidden bg-slate-900 lg:relative lg:inset-auto lg:min-h-0">
+				<img class="absolute inset-0 h-full w-full object-cover object-center motion-safe:animate-hero-drift motion-reduce:animate-none" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=90" alt="Panes recién elaborados en una panadería" fetchpriority="high">
+				<div class="absolute inset-0 bg-gradient-to-t from-[#071a3a]/90 via-[#102a56]/15 to-transparent" aria-hidden="true"></div>
+				<div class="absolute left-6 top-6 z-10 flex items-center gap-3 sm:left-10 sm:top-10">
+					<span class="grid h-11 w-11 place-items-center border border-white/60 bg-white/10 font-mono text-sm backdrop-blur-sm" aria-hidden="true">✳</span>
+					<span class="text-xs font-bold uppercase tracking-[0.18em] text-white">Ciencia y tecnología alimentaria</span>
+				</div>
+				<div class="absolute bottom-7 left-6 z-10 hidden border-l-2 border-cyan-300 pl-4 sm:bottom-10 sm:left-10 lg:block">
+					<p class="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Aprender haciendo</p>
+					<p class="font-serif text-2xl text-white sm:text-3xl">De la materia prima a tu mesa.</p>
+				</div>
+			</div>
+
+			<div class="relative z-10 flex min-h-[calc(100svh-8rem)] min-w-0 w-full flex-col justify-center overflow-hidden bg-gradient-to-t from-[#0b1f46]/95 via-[#102a56]/80 to-[#1d4ed8]/25 px-5 py-6 sm:px-12 sm:py-12 lg:min-h-0 lg:bg-[#102a56] lg:px-12 lg:py-14 xl:px-16">
+				<div class="pointer-events-none absolute -right-12 top-12 h-48 w-48 rotate-12 border border-sky-200/25 motion-safe:animate-shape-drift" aria-hidden="true"></div>
+				<p class="relative z-10 mb-4 text-xs font-bold uppercase tracking-[0.2em] text-sky-300 sm:mb-5">Programa de estudios · Huanta</p>
+				<h1 id="program-title" class="relative z-10 w-full max-w-full font-serif text-3xl leading-[1.04] text-white sm:text-5xl lg:text-5xl 2xl:text-6xl"><span class="block">Industrias de</span><span class="block">Alimentos y Bebidas</span></h1>
+				<p class="relative z-10 mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-6 sm:text-lg">Transforma materias primas en alimentos y bebidas innovadores, seguros y de calidad, con tecnología, ciencia y compromiso.</p>
+				<div class="relative z-10 mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+					<a class="inline-flex min-h-11 w-full items-center justify-center gap-3 bg-sky-300 px-5 py-3 text-sm font-bold text-[#0b1f46] transition duration-300 hover:-translate-y-1 hover:bg-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-200 motion-reduce:transition-none sm:w-auto" href="#modules-title">Explorar módulos <span aria-hidden="true">↗</span></a>
+					<a class="inline-flex min-h-11 w-full items-center justify-center border border-white/35 px-5 py-3 text-sm font-bold text-white transition duration-300 hover:border-white hover:bg-white/10 motion-reduce:transition-none sm:w-auto" href="#study-title">Ver plan de estudios</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Información general, titulación y modalidad -->
+		<section class="program-detail grid w-full grid-cols-1 items-center gap-10 bg-white px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 lg:px-[clamp(4rem,8vw,8rem)] lg:py-20" aria-labelledby="detail-title">
+			<div class="group relative isolate min-h-[24rem] overflow-hidden bg-slate-950 sm:min-h-[28rem] lg:min-h-[31rem]" aria-label="Procesamiento y control de calidad de alimentos">
+				<img class="absolute inset-0 h-full w-full object-cover transition duration-1000 ease-out group-hover:-translate-y-2 group-hover:translate-x-1 group-hover:rotate-1 group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:transform-none" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=85" alt="Preparación de alimentos en un entorno de cocina profesional" loading="lazy">
+				<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-emerald-950/10 to-amber-950/10 transition-colors duration-700 group-hover:from-slate-950/90 group-hover:via-emerald-950/25 group-hover:to-amber-900/20" aria-hidden="true"></div>
+				<div class="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/35 transition duration-700 ease-out group-hover:rotate-12 group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:rotate-0 motion-reduce:group-hover:scale-100 sm:h-80 sm:w-80" aria-hidden="true"></div>
+				<div class="pointer-events-none absolute right-8 top-8 h-20 w-20 rotate-12 rounded-2xl border border-amber-100/50 bg-amber-200/10 backdrop-blur-sm transition duration-700 ease-out group-hover:-translate-x-5 group-hover:translate-y-5 group-hover:-rotate-6 group-hover:scale-125 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 motion-reduce:group-hover:translate-y-0 motion-reduce:group-hover:rotate-12 motion-reduce:group-hover:scale-100 sm:right-12 sm:top-12 sm:h-28 sm:w-28" aria-hidden="true"></div>
+				<div class="absolute bottom-6 left-6 z-10 flex items-center gap-3 rounded-full border border-white/30 bg-slate-950/60 px-4 py-3 text-white shadow-xl backdrop-blur-md transition duration-500 ease-out group-hover:-translate-y-2 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:transform-none sm:bottom-8 sm:left-8">
+					<span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+						<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-300 opacity-75 motion-reduce:animate-none"></span>
+						<span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-200"></span>
+					</span>
+					<span class="text-xs font-extrabold uppercase tracking-[0.16em] text-amber-100 sm:text-sm">Inocuidad · innovación · calidad</span>
+				</div>
+			</div>
+
+				<div class="detail-copy mx-auto w-full max-w-2xl">
+					<p class="eyebrow">Programa de estudios</p>
+					<h2 id="detail-title">Industrias de Alimentos y Bebidas</h2>
+					<p>El Programa de Estudios de Industrias de Alimentos y Bebidas del Instituto de Educación Superior Público Huanta forma profesionales altamente capacitados para desempeñarse en la producción, procesamiento y control de calidad de alimentos y bebidas. Durante los tres años de formación, adquirirás conocimientos en tecnología de alimentos, gestión de procesos industriales, seguridad alimentaria y desarrollo de nuevos productos.</p>
+					<p>El plan de estudios incluye prácticas en laboratorios especializados y proyectos de innovación para aplicar lo aprendido en entornos reales. Podrás desempeñarte en industrias alimentarias, plantas procesadoras, laboratorios de análisis de calidad y áreas de investigación y desarrollo.</p>
+
+					<h3>Titulación:</h3>
+					<p>Profesional Técnico en Industrias de Alimentos y Bebidas</p>
+
+					<div class="detail-facts">
+						<div>
+							<span class="fact-icon" aria-hidden="true">✳</span>
+							<div><h3>Duración:</h3><p>6 semestres (3 años)</p></div>
+						</div>
+						<div>
+							<span class="fact-icon" aria-hidden="true">⚗</span>
+							<div><h3>Modalidad:</h3><p>Presencial</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Módulos profesionales con imágenes de la industria alimentaria -->
+		<section class="modules-section order-3 relative w-full overflow-hidden bg-gradient-to-br from-emerald-50 via-lime-50 to-amber-50 px-5 py-16 sm:px-8 sm:py-20 lg:px-16 lg:py-24" aria-labelledby="modules-title">
+			<div class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-lime-300/20" aria-hidden="true"></div>
+			<div class="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-amber-200/25" aria-hidden="true"></div>
+			<div class="relative z-10 mx-auto mb-12 max-w-4xl text-center">
+				<p class="mb-4 text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-800">De la materia prima al producto</p>
+				<p class="mx-auto mb-5 max-w-3xl text-center text-base leading-relaxed text-slate-600 sm:text-lg">Aprende a transformar alimentos y bebidas con procesos responsables, tecnología y altos estándares de calidad.</p>
+				<h2 id="modules-title" class="text-center font-serif text-4xl leading-tight text-[#102a56] sm:text-5xl lg:text-6xl">Módulos Profesionales</h2>
+			</div>
+
+			<div class="relative z-10 mx-auto max-w-7xl" aria-label="Módulos profesionales">
+				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-emerald-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none">
+						<div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+							<img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85" alt="Pan artesanal elaborado a partir de materias primas" loading="lazy">
+							<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-emerald-900/10 to-transparent transition-colors duration-500 group-hover:from-emerald-950/90 group-hover:via-lime-700/20" aria-hidden="true"></div>
+							<span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">01</span>
+						</div>
+						<div class="flex flex-1 flex-col items-start bg-[#123b35] bg-[radial-gradient(circle_at_50%_0%,rgba(163,230,53,0.2),transparent_38%),repeating-linear-gradient(45deg,transparent_0_190px,rgba(16,185,129,0.16)_190px_300px,transparent_300px_500px)] [background-size:900px_900px,900px_900px] p-5 text-emerald-50 motion-safe:animate-[footer-stripes_24s_linear_infinite] sm:p-6">
+							<p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-lime-300">Recepción · acondicionamiento · mezclado</p>
+							<h3 class="mb-3 font-serif text-2xl leading-snug text-white">Módulo 1: Recepción, acondicionamiento y mezclado de la materia prima e insumos</h3>
+							<p class="mb-5 text-sm leading-relaxed text-emerald-100/80">Recepciona y acondiciona materias primas e insumos, y realiza mezclas según el plan de producción y la normativa correspondiente.</p>
+							<a class="mt-auto inline-flex items-center gap-2 text-sm font-extrabold text-lime-300 hover:text-lime-200" href="#study-title">Ver ruta de aprendizaje <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span></a>
+						</div>
+					</article>
+
+					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-emerald-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none">
+						<div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+							<img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Ingredientes frescos preparados para su procesamiento" loading="lazy">
+							<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-emerald-900/10 to-transparent transition-colors duration-500 group-hover:from-emerald-950/90 group-hover:via-lime-700/20" aria-hidden="true"></div>
+							<span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">02</span>
+						</div>
+						<div class="flex flex-1 flex-col items-start bg-[#123b35] bg-[radial-gradient(circle_at_50%_0%,rgba(163,230,53,0.2),transparent_38%),repeating-linear-gradient(45deg,transparent_0_190px,rgba(16,185,129,0.16)_190px_300px,transparent_300px_500px)] [background-size:900px_900px,900px_900px] p-5 text-emerald-50 motion-safe:animate-[footer-stripes_24s_linear_infinite] sm:p-6">
+							<p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-lime-300">Tratamientos térmicos · separación · conservación</p>
+							<h3 class="mb-3 font-serif text-2xl leading-snug text-white">Módulo 2: Tratamiento térmico, eliminación de agua y separación</h3>
+							<p class="mb-5 text-sm leading-relaxed text-emerald-100/80">Realiza tratamientos térmicos, operaciones de eliminación de agua y separación, según el tipo de producto y los procedimientos establecidos.</p>
+							<a class="mt-auto inline-flex items-center gap-2 text-sm font-extrabold text-lime-300 hover:text-lime-200" href="#study-title">Ver ruta de aprendizaje <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span></a>
+						</div>
+					</article>
+
+					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-emerald-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none">
+						<div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+							<img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=85" alt="Productos lácteos y bebidas listos para envasar" loading="lazy">
+							<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-emerald-900/10 to-transparent transition-colors duration-500 group-hover:from-emerald-950/90 group-hover:via-lime-700/20" aria-hidden="true"></div>
+							<span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">03</span>
+						</div>
+						<div class="flex flex-1 flex-col items-start bg-[#123b35] bg-[radial-gradient(circle_at_50%_0%,rgba(163,230,53,0.2),transparent_38%),repeating-linear-gradient(45deg,transparent_0_190px,rgba(16,185,129,0.16)_190px_300px,transparent_300px_500px)] [background-size:900px_900px,900px_900px] p-5 text-emerald-50 motion-safe:animate-[footer-stripes_24s_linear_infinite] sm:p-6">
+							<p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-lime-300">Biotecnología · fermentación · envasado</p>
+							<h3 class="mb-3 font-serif text-2xl leading-snug text-white">Módulo 3: Biotecnología y envasado en el procesamiento de alimentos</h3>
+							<p class="mb-5 text-sm leading-relaxed text-emerald-100/80">Aplica procedimientos de biotecnología y realiza el envasado de productos alimentarios con trazabilidad y protección adecuada.</p>
+							<a class="mt-auto inline-flex items-center gap-2 text-sm font-extrabold text-lime-300 hover:text-lime-200" href="#study-title">Ver ruta de aprendizaje <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span></a>
+						</div>
+					</article>
+
+					<article class="group flex h-full flex-col overflow-hidden rounded-xl border border-emerald-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none">
+						<div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+							<img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85" alt="Análisis y control de calidad en un laboratorio" loading="lazy">
+							<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-emerald-900/10 to-transparent transition-colors duration-500 group-hover:from-emerald-950/90 group-hover:via-lime-700/20" aria-hidden="true"></div>
+							<span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">04</span>
+						</div>
+						<div class="flex flex-1 flex-col items-start bg-[#123b35] bg-[radial-gradient(circle_at_50%_0%,rgba(163,230,53,0.2),transparent_38%),repeating-linear-gradient(45deg,transparent_0_190px,rgba(16,185,129,0.16)_190px_300px,transparent_300px_500px)] [background-size:900px_900px,900px_900px] p-5 text-emerald-50 motion-safe:animate-[footer-stripes_24s_linear_infinite] sm:p-6">
+							<p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-lime-300">Inocuidad · gestión · mejora continua</p>
+							<h3 class="mb-3 font-serif text-2xl leading-snug text-white">Módulo 4: Aseguramiento de la calidad</h3>
+							<p class="mb-5 text-sm leading-relaxed text-emerald-100/80">Mantén las condiciones de calidad en la elaboración de alimentos según los procedimientos de la organización y la normativa vigente.</p>
+							<a class="mt-auto inline-flex items-center gap-2 text-sm font-extrabold text-lime-300 hover:text-lime-200" href="#study-title">Ver ruta de aprendizaje <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">↗</span></a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Perfil de egreso y competencias profesionales -->
+		<section class="graduate-profile-section bg-[#f8f7f2] px-5 py-16 text-[#25333c] sm:px-8 lg:px-12 lg:py-24" aria-labelledby="graduate-profile-title">
+			<figure class="graduate-profile-visual">
+				<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=85" alt="Profesional con indumentaria de protección trabajando en un laboratorio" loading="lazy">
+				<figcaption><span>01 / 04</span> Ciencia, inocuidad y calidad en cada proceso.</figcaption>
+			</figure>
+			<div class="graduate-profile-heading mx-auto mb-10 max-w-4xl text-left md:text-center">
+				<p class="eyebrow">Perfil de egreso</p>
+				<h2 id="graduate-profile-title">Tu futuro en la industria alimentaria</h2>
+				<p>Conoce las competencias y oportunidades que desarrollarás en la producción de alimentos y bebidas.</p>
+			</div>
+
+			<div class="profile-tabs" data-tabs>
+				<div class="profile-tab-list" role="tablist" aria-label="Información del perfil de egreso">
+					<button class="profile-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="profile-panel" data-tab="profile">Perfil profesional</button>
+					<button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-panel" data-tab="competencies">Competencias específicas</button>
+					<button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-panel" data-tab="employability">Competencias para la empleabilidad</button>
+					<button class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-panel" data-tab="fields">Ámbitos de desempeño</button>
+				</div>
+
+				<div id="profile-panel" class="profile-panel" role="tabpanel" tabindex="0">
+					<div class="profile-panel-content" data-panel="profile">
+						<p>El profesional técnico del programa de estudios de <strong>Industrias de Alimentos y Bebidas</strong> es competente en el manejo de la materia prima e insumos, así como en su recepción y acondicionamiento. Realiza procesos de mezclado, tratamiento térmico, eliminación de agua y separación, y utiliza la biotecnología en la producción de alimentos y bebidas, garantizando su inocuidad mediante sistemas de gestión de calidad y un desempeño ético.</p>
+						<p>Asimismo, ejecuta el envasado y la protección de alimentos y bebidas. Colabora en su entorno laboral, se comunica eficazmente y maneja el idioma inglés para interpretar y comunicar instrucciones vinculadas a su formación. Utiliza tecnologías de la información y comunicación y soluciona problemas de su campo mediante la innovación y el emprendimiento, contribuyendo a la mejora continua y al cuidado del medio ambiente.</p>
+					</div>
+					<div class="profile-panel-content" data-panel="competencies" hidden>
+						<ul>
+							<li>Mantener las condiciones de calidad en la elaboración de los alimentos, según procedimientos de la organización y normativa correspondiente.</li>
+							<li>Recepcionar la materia prima e insumos, según procedimientos establecidos y normativa correspondiente.</li>
+							<li>Acondicionar la materia prima e insumos, de acuerdo con el plan de producción, las especificaciones técnicas, los procedimientos de la organización y la normativa correspondiente.</li>
+							<li>Realizar el mezclado de la materia prima e insumos, según procedimientos establecidos y normativa correspondiente.</li>
+							<li>Realizar tratamientos térmicos de acuerdo con el tipo de producto alimentario y los procedimientos establecidos.</li>
+							<li>Realizar operaciones de eliminación de agua, de acuerdo con el tipo de producto alimentario y los procedimientos establecidos.</li>
+							<li>Realizar operaciones de separación, de acuerdo con el tipo de producto alimentario y los procedimientos establecidos.</li>
+							<li>Realizar procedimientos de biotecnología, de acuerdo con el tipo de producto alimentario y los procedimientos establecidos.</li>
+							<li>Ejecutar las operaciones de envasado de productos alimentarios, considerando su trazabilidad, los requerimientos tecnológicos del cliente y la normativa correspondiente.</li>
+							<li>Proteger los productos alimentarios envasados, según el plan de producción, los requerimientos de traslado y la normativa correspondiente.</li>
+						</ul>
+					</div>
+					<div class="profile-panel-content" data-panel="employability" hidden>
+						<ul>
+							<li><strong>Comunicación efectiva (UD/T).-</strong> Expresar con claridad conceptos, ideas, sentimientos, hechos y opiniones en forma oral y escrita, para comunicarse e interactuar con otras personas en contextos sociales y laborales diversos.</li>
+							<li><strong>Inglés (UD/T).-</strong> Comprender y comunicar ideas cotidianas a nivel oral y escrito, e interactuar en diversas situaciones sociales y laborales.</li>
+							<li><strong>Tecnologías de la información (UD/T).-</strong> Manejar herramientas informáticas de las TIC para buscar y analizar información, comunicar y realizar procesos o tareas vinculadas al área profesional.</li>
+							<li><strong>Ética (UD/T).-</strong> Establecer relaciones con respeto y justicia en los ámbitos personal, colectivo e institucional, contribuyendo a una convivencia democrática orientada al bien común.</li>
+							<li><strong>Solución de problemas (UD/T).-</strong> Identificar situaciones complejas, evaluar posibles soluciones y aplicar herramientas flexibles para atender una necesidad.</li>
+							<li><strong>Innovación (UD/T).-</strong> Desarrollar procedimientos sistemáticos enfocados en la mejora significativa u original de un proceso, producto o servicio, respondiendo a problemas y necesidades del sector.</li>
+							<li><strong>Emprendimiento (UD/T).-</strong> Identificar oportunidades de proyectos o negocios que generen valor y sean sostenibles, gestionando recursos con creatividad y ética para desarrollar innovaciones en bienes, servicios, procesos o productos.</li>
+							<li><strong>Trabajo colaborativo (UD/T).-</strong> Participar activamente en el logro de objetivos y metas comunes, integrándose con otras personas con respeto y justicia en un contexto determinado.</li>
+						</ul>
+					</div>
+					<div class="profile-panel-content" data-panel="fields" hidden>
+						<ul>
+							<li>Sector público (hospitales, municipalidades y programas sociales) y sector privado (fábricas de alimentos y bebidas, supermercados, almacenes y plantas procesadoras).</li>
+							<li>Áreas de recepción de materias primas e insumos y de producción de alimentos y bebidas.</li>
+							<li>Áreas de conservación, envasado, almacenamiento y distribución de productos alimenticios.</li>
+							<li>Áreas de control de calidad, análisis de alimentos e innovación y desarrollo de nuevos productos.</li>
+							<li>Emprendimientos y gestión de empresas propias de producción de alimentos y bebidas.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección visual sobre innovación y sostenibilidad alimentaria -->
+		<section class="future-section relative grid w-full grid-cols-1 overflow-hidden bg-gradient-to-br from-[#12353b] via-[#18514d] to-[#273c45] px-5 py-16 text-white sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-[clamp(4rem,8vw,8rem)] lg:py-24" aria-labelledby="future-title">
+			<div class="future-copy">
+				<p class="eyebrow">Innovación que alimenta el futuro</p>
+				<h2 id="future-title">Transforma alimentos. Mejora vidas.</h2>
+				<p>Desarrolla productos con valor agregado, impulsa procesos sostenibles y contribuye a la calidad y seguridad alimentaria de tu comunidad.</p>
+				<a class="future-button" href="#study-title">Descubrir el plan de estudios <span aria-hidden="true">↗</span></a>
+			</div>
+
+			<div class="relative mx-auto grid min-h-[20rem] w-full max-w-xl place-items-center overflow-hidden rounded-full border border-lime-200/20 bg-[radial-gradient(circle_at_50%_50%,rgba(163,230,53,0.2),transparent_60%)]" aria-label="Ilustración de alimentos frescos">
+				<img class="h-56 w-56 rounded-full object-cover shadow-2xl ring-8 ring-white/10 transition duration-700 hover:scale-105 sm:h-72 sm:w-72 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Selección de alimentos frescos y vegetales" loading="lazy">
+				<span class="absolute left-[12%] top-[18%] h-4 w-4 rounded-full bg-lime-300 shadow-[0_0_1.5rem_rgba(190,242,100,0.8)]" aria-hidden="true"></span>
+				<span class="absolute bottom-[18%] right-[12%] h-3 w-3 rounded-full bg-amber-200 shadow-[0_0_1.5rem_rgba(253,230,138,0.8)]" aria-hidden="true"></span>
+			</div>
+		</section>
+
+		<!-- Perfil profesional y plan académico desplegable -->
+		<section class="study-section relative w-full overflow-hidden bg-[#f7f8f4] px-5 py-16 sm:px-8 lg:px-16 lg:py-24" aria-labelledby="study-title">
+			<div class="study-heading">
+				<p class="eyebrow">Tu ruta profesional</p>
+				<h2 id="study-title">Perfil y Plan de Estudios</h2>
+				<p>Fórmate en procesos de producción, conservación e inocuidad alimentaria a lo largo de seis semestres.</p>
+			</div>
+
+			<div class="study-layout">
+				<article class="profile-card">
+					<img class="profile-student-image" src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=700&q=85" alt="Productos lácteos y bebidas elaborados a partir de alimentos" loading="lazy">
+					<span class="profile-orb" aria-hidden="true"></span>
+					<p class="card-label">Perfil profesional</p>
+					<h3>Técnico en Industrias de Alimentos y Bebidas</h3>
+					<p>Aprenderás a transformar materias primas en productos inocuos y de calidad, aplicando tecnología, buenas prácticas de manufactura e innovación.</p>
+					<div class="profile-tags">
+						<span class="profile-skill">Inocuidad</span>
+						<span class="profile-skill">Calidad</span>
+						<span class="profile-skill">Innovación</span>
+					</div>
+				</article>
+
+				<div class="semester-plan">
+					<h3>Plan de estudios</h3>
+					<details class="semester-detail" open>
+						<summary><span>01</span> Semestre académico I</summary>
+						<table class="semester-table">
+							<thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+							<tbody>
+								<tr><td>Recepción de materias primas e insumos</td><td>4</td><td>96</td></tr>
+								<tr><td>Buenas Prácticas de Manufactura</td><td>3</td><td>64</td></tr>
+								<tr><td>Química aplicada</td><td>4</td><td>96</td></tr>
+								<tr><td>Maquinaria y equipos en la recepción y clasificación de la materia prima</td><td>3</td><td>64</td></tr>
+								<tr><td>Almacenamiento de materias primas e insumos</td><td>3</td><td>64</td></tr>
+								<tr><td>Comunicación Oral</td><td>2</td><td>48</td></tr>
+								<tr><td>Aplicaciones en Internet</td><td>2</td><td>48</td></tr>
+							</tbody>
+						</table>
+					</details>
+					<details class="semester-detail">
+						<summary><span>02</span> Semestre académico II</summary>
+						<table class="semester-table">
+							<thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+							<tbody>
+								<tr><td>Selección y clasificación de las materias primas</td><td>3</td><td>80</td></tr>
+								<tr><td>Acondicionamiento de las materias primas para el proceso</td><td>3</td><td>64</td></tr>
+								<tr><td>Higiene en la Industria Alimentaria</td><td>3</td><td>64</td></tr>
+								<tr><td>Proceso para Mezclado y Homogenizado</td><td>3</td><td>80</td></tr>
+								<tr><td>Bioquímica de los alimentos</td><td>4</td><td>96</td></tr>
+								<tr><td>Interpretación y producción de textos</td><td>2</td><td>48</td></tr>
+								<tr><td>Ofimática</td><td>2</td><td>48</td></tr>
+							</tbody>
+						</table>
+					</details>
+					<details class="semester-detail">
+						<summary><span>03</span> Semestre académico III</summary>
+						<table class="semester-table">
+							<thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+							<tbody>
+								<tr><td>Procesamiento de Frutas y Hortalizas</td><td>4</td><td>96</td></tr>
+								<tr><td>Procesos térmicos en productos cárnicos e hidrobiológicos</td><td>4</td><td>96</td></tr>
+								<tr><td>Planificación y organización de la producción de alimentos</td><td>2</td><td>48</td></tr>
+								<tr><td>Maquinarias y equipos para la separación y eliminación de agua</td><td>2</td><td>48</td></tr>
+								<tr><td>Microbiología de alimentos</td><td>4</td><td>96</td></tr>
+								<tr><td>Inglés para la comunicación oral</td><td>2</td><td>48</td></tr>
+								<tr><td>Estrategias para la Resolución de Problemas</td><td>2</td><td>48</td></tr>
+							</tbody>
+						</table>
+					</details>
+					<details class="semester-detail">
+						<summary><span>04</span> Semestre académico IV</summary>
+						<table class="semester-table">
+							<thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+							<tbody>
+								<tr><td>Procesamiento de productos de panadería y pastelería</td><td>5</td><td>144</td></tr>
+								<tr><td>Operaciones de eliminación de agua en productos vegetales y azúcares</td><td>3</td><td>64</td></tr>
+								<tr><td>Operaciones de Separación de los Alimentos</td><td>2</td><td>48</td></tr>
+								<tr><td>Análisis de alimentos</td><td>5</td><td>128</td></tr>
+								<tr><td>Comprensión y redacción en inglés</td><td>2</td><td>48</td></tr>
+								<tr><td>Comportamiento Ético</td><td>2</td><td>48</td></tr>
+							</tbody>
+						</table>
+					</details>
+					<details class="semester-detail">
+						<summary><span>05</span> Semestre académico V</summary>
+						<table class="semester-table">
+							<thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+							<tbody>
+								<tr><td>Procesamiento de productos Lácteos</td><td>4</td><td>96</td></tr>
+								<tr><td>Procesamiento de productos Fermentados</td><td>3</td><td>80</td></tr>
+								<tr><td>Envasado de productos alimenticios</td><td>2</td><td>48</td></tr>
+								<tr><td>Etiquetado, Rotulado y Despacho de los productos Alimentarios</td><td>2</td><td>48</td></tr>
+								<tr><td>Almacenamiento de alimentos</td><td>3</td><td>64</td></tr>
+								<tr><td>Empacado y embalado de alimentos</td><td>2</td><td>48</td></tr>
+								<tr><td>Fundamentos de innovación tecnológica</td><td>2</td><td>48</td></tr>
+								<tr><td>Oportunidades de negocios</td><td>2</td><td>48</td></tr>
+							</tbody>
+						</table>
+					</details>
+					<details class="semester-detail">
+						<summary><span>06</span> Semestre académico VI</summary>
+						<table class="semester-table">
+							<thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+							<tbody>
+								<tr><td>Sistemas HACCP</td><td>3</td><td>80</td></tr>
+								<tr><td>Sistemas de gestión de la calidad</td><td>3</td><td>80</td></tr>
+								<tr><td>Evaluación sensorial de alimentos</td><td>3</td><td>64</td></tr>
+								<tr><td>Control estadístico de procesos</td><td>2</td><td>64</td></tr>
+								<tr><td>Nutrición Humana</td><td>3</td><td>64</td></tr>
+								<tr><td>Innovación tecnológica</td><td>3</td><td>80</td></tr>
+								<tr><td>Plan de negocios</td><td>2</td><td>48</td></tr>
+							</tbody>
+						</table>
+					</details>
+					<button class="schedule-button" type="button" data-schedule-open>Consultar horario <span aria-hidden="true">→</span></button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ruleta automática de testimonios -->
+		<section class="testimonials-section relative w-full overflow-hidden bg-[#f1f5f0] px-5 py-16 sm:px-8 lg:px-16 lg:py-24" aria-labelledby="testimonials-title">
+			<div class="testimonials-heading">
+				<p class="eyebrow">Testimonios</p>
+				<h2 id="testimonials-title">Lo que dicen nuestros estudiantes de Industrias de Alimentos y Bebidas</h2>
+				<p>Experiencias de formación, prácticas y oportunidades en la industria alimentaria.</p>
+			</div>
+
+			<div class="testimonial-roulette" aria-live="polite">
+				<div class="testimonial-window">
+					<div class="testimonial-track">
+						<article class="testimonial-card testimonial-left"></article>
+						<article class="testimonial-card testimonial-center is-active"></article>
+						<article class="testimonial-card testimonial-right"></article>
+					</div>
+				</div>
+			</div>
+
+			<div class="roulette-dots" role="tablist" aria-label="Seleccionar testimonio">
+				<button class="is-active" type="button" role="tab" aria-label="Mostrar testimonio 1" aria-selected="true"></button>
+				<button type="button" role="tab" aria-label="Mostrar testimonio 2" aria-selected="false"></button>
+				<button type="button" role="tab" aria-label="Mostrar testimonio 3" aria-selected="false"></button>
+			</div>
+		</section>
+	</main>
+
+	<!-- Información para consultar los horarios vigentes. -->
+	<div class="schedule-modal" data-schedule-modal hidden>
+		<div class="schedule-dialog" role="dialog" aria-modal="true" aria-labelledby="schedule-title">
+			<button class="schedule-close" type="button" data-schedule-close aria-label="Cerrar consulta de horario">×</button>
+			<p class="eyebrow">Consulta académica</p>
+			<h2 id="schedule-title">Horario de Industrias de Alimentos y Bebidas</h2>
+			<p>Los turnos y horarios pueden variar según el semestre. Comunícate con admisión para recibir la información vigente.</p>
+			<a class="schedule-button" href="index.html#contacto">Contactar a admisión <span aria-hidden="true">→</span></a>
+		</div>
+	</div>
+
+	<div class="quick-info-modal" id="quickInfoModal" hidden>
+		<div class="quick-info-dialog" role="dialog" aria-modal="true" aria-labelledby="quickInfoTitle">
+			<button class="quick-info-close" type="button" aria-label="Cerrar información rápida">×</button>
+			<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85" alt="Análisis de productos en un laboratorio de control de calidad" loading="lazy">
+			<div class="quick-info-copy">
+				<p class="eyebrow">Vista rápida</p>
+				<h3 id="quickInfoTitle">Industrias de Alimentos y Bebidas</h3>
+				<p>Fórmate para procesar, conservar y envasar alimentos y bebidas, asegurando su calidad e inocuidad con innovación y responsabilidad.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pie de página institucional -->
+	<section id="pie-pagina" class="footer-section" aria-label="Pie de página">
+		<footer class="site-footer site-footer-home">
+			<section class="footer-main">
+				<section class="footer-brand">
+					<img class="footer-logo-image" src="assets/logo-huanta.png" alt="IESP Huanta">
+					<p>Instituto de Educación Superior Público “Huanta”</p>
+				</section>
+
+				<section class="footer-column">
+					<h3>Explora</h3>
+					<a href="index.html#nosotros">Nosotros</a>
+					<a href="industrias.html">Programa de estudios</a>
+					<a href="index.html#servicios">Servicios</a>
+				</section>
+
+				<section class="footer-column">
+					<h3>Información</h3>
+					<p>Jr. Córdoba N.º 650<br>Huanta, Ayacucho - Perú</p>
+					<a href="tel:+5166322296">(066) 322296</a>
+					<a href="mailto:informes@iestphuanta.edu.pe">informes@iestphuanta.edu.pe</a>
+				</section>
+
+				<section class="footer-column footer-connect">
+					<h3>Conecta</h3>
+					<p>Conoce nuestras oportunidades de formación profesional.</p>
+					<a class="footer-social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+						<span aria-hidden="true">f</span> Facebook
+					</a>
+				</section>
+			</section>
+
+			<section class="footer-bottom">
+				<p>&copy; 2026 Instituto de Educación Superior Público “Huanta”</p>
+			</section>
+		</footer>
+	</section>
+	<script src="js/industrias.js" defer></script>
+</body>
+
+</html>
