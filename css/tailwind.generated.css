@@ -913,6 +913,10 @@ body {
   min-height: 25rem;
 }
 
+.min-h-\[calc\(100svh-5\.7rem\)\] {
+  min-height: calc(100svh - 5.7rem);
+}
+
 .min-h-\[calc\(100svh-8rem\)\] {
   min-height: calc(100svh - 8rem);
 }
@@ -1135,6 +1139,11 @@ body {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -3104,6 +3113,11 @@ body {
 
   .lg\:gap-14 {
     gap: 3.5rem;
+  }
+
+  .lg\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .lg\:bg-\[\#102a56\] {
