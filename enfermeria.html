@@ -3,32 +3,502 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce el programa de Enfermería Técnica del IESP Huanta: módulos profesionales, perfil de egreso, competencias y plan de estudios.">
     <title>Enfermería Técnica | IESP Huanta</title>
     <link rel="stylesheet" href="css/diseno.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tailwind.generated.css">
 </head>
-<body>
+<body class="bg-[#f7f8f4] text-[#202b39] antialiased selection:bg-cyan-200">
     <div class="contact-bar" aria-label="Información de contacto">
-        <span><b>☎</b> (066) 322296</span><span><b>⌖</b> Jr. Córdoba N.º 650</span><span><b>✉</b> informes@iestphuanta.edu.pe</span>
+        <span><b aria-hidden="true">☎</b> (066) 322296</span>
+        <span><b aria-hidden="true">⌖</b> Jr. Córdoba N.º 650</span>
+        <span><b aria-hidden="true">✉</b> contactos@iestphuanta.edu.pe</span>
+        <a class="font-bold text-blue-700 no-underline" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook del IESP Huanta">f</a>
     </div>
-    <header class="site-header"><a class="brand" href="index.html"><img src="assets/logo-huanta.png" alt="IESP Huanta"></a><nav><a href="index.html">Inicio</a><details class="nav-programs"><summary class="nav-programs-toggle active">Programas de estudios <span aria-hidden="true">⌄</span></summary><div class="nav-programs-menu"><a href="diseño.html"><span>⌘</span> Diseño y Programación Web</a><a class="current-program" href="enfermeria.html"><span>✚</span> Enfermería Técnica</a><a href="industrias.html"><span>◈</span> Industrias de Alimentos y Bebidas</a><a href="mecatronica.html"><span>⚙</span> Mecatrónica Automotriz</a><a href="agropecuaria.html"><span>✦</span> Producción Agropecuaria</a></div></details><a href="index.html#contacto">Contacto</a></nav></header>
-    <main class="career-page relative isolate flex min-h-[calc(100svh-9rem)] items-end overflow-hidden bg-slate-950 px-0 py-0 text-left">
-        <img class="career-photo" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=90" alt="Profesional de salud brindando atención a una paciente" fetchpriority="high">
-        <div class="career-shade" aria-hidden="true"></div>
-        <div class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-12 pt-28 sm:px-10 sm:pb-16 lg:px-14">
-            <div class="max-w-4xl">
-                <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Programa de estudios · Salud</p>
-                <h1 class="mb-6 max-w-4xl text-5xl font-semibold leading-[0.95] text-white md:text-7xl">Enfermería Técnica</h1>
-                <p class="max-w-3xl text-base leading-relaxed text-white/85 md:text-xl">Forma profesionales técnicos preparados para brindar atención humana, responsable y de calidad en el sector salud.</p>
-                <div class="mt-10 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-5 border-t border-white/25 pt-5 sm:grid-cols-3">
-                    <div><p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200">Aprenderás</p><p class="mt-2 text-sm text-white/90">Cuidados de salud</p></div>
-                    <div><p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200">Desarrollarás</p><p class="mt-2 text-sm text-white/90">Atención responsable</p></div>
-                    <div><p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200">Aportarás</p><p class="mt-2 text-sm text-white/90">Bienestar a tu comunidad</p></div>
+
+    <header class="site-header site-header-reference">
+        <a class="brand" href="index.html" aria-label="Volver al inicio">
+            <img src="assets/logo-huanta.png" alt="IESP Huanta">
+        </a>
+        <button class="mobile-menu-trigger" type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú">
+            <span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span data-menu-label>Menú</span>
+        </button>
+        <nav id="site-navigation" aria-label="Navegación principal">
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle">Nosotros <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu">
+                    <a href="index.html#nosotros"><span>01</span> Nuestra institución</a>
+                    <a href="index.html#nosotros"><span>02</span> Misión y visión</a>
+                    <a href="index.html#estadisticas"><span>03</span> Instituto licenciado</a>
                 </div>
-                <a class="future-button mt-8 inline-flex" href="index.html#contacto">Solicitar información <span aria-hidden="true">↗</span></a>
+            </details>
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle active">Programas de estudios <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu">
+                    <a href="diseño.html"><span>⌘</span> Diseño y Programación Web</a>
+                    <a class="current-program" href="enfermeria.html" aria-current="page"><span>✚</span> Enfermería Técnica</a>
+                    <a href="industrias.html"><span>◈</span> Industrias de Alimentos y Bebidas</a>
+                    <a href="mecatronica.html"><span>⚙</span> Mecatrónica Automotriz</a>
+                    <a href="agropecuaria.html"><span>✦</span> Producción Agropecuaria</a>
+                </div>
+            </details>
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle">Admisión y Matrícula <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu">
+                    <a href="index.html#noticias"><span>01</span> Matrícula</a>
+                    <a href="index.html#contacto"><span>02</span> Solicitar información</a>
+                </div>
+            </details>
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle">Transparencia <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu"><a href="index.html#estadisticas"><span>01</span> Estadísticas institucionales</a></div>
+            </details>
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle">Trámite <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu"><a href="index.html#contacto"><span>01</span> Mesa de partes y consultas</a></div>
+            </details>
+            <a href="index.html#contacto">Contáctanos</a>
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle">Servicios <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu">
+                    <a href="index.html#servicios"><span>01</span> Biblioteca</a>
+                    <a href="index.html#servicios"><span>02</span> Laboratorios</a>
+                    <a href="index.html#servicios"><span>03</span> Red telemática</a>
+                </div>
+            </details>
+            <details class="nav-programs">
+                <summary class="nav-programs-toggle">Otras páginas <span aria-hidden="true">⌄</span></summary>
+                <div class="nav-programs-menu">
+                    <a href="index.html"><span>01</span> Página principal</a>
+                    <a href="index.html#galeria"><span>02</span> Galería institucional</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        <section class="program-hero order-1 relative grid min-h-[calc(100svh-8rem)] grid-cols-1 overflow-hidden bg-[#102a56] text-white lg:min-h-[calc(100svh-13rem)] lg:grid-cols-[0.95fr_1.05fr]" aria-labelledby="program-title">
+            <div class="group relative isolate min-h-[22rem] overflow-hidden bg-slate-900 sm:min-h-[28rem] lg:min-h-0">
+                <img class="absolute inset-0 h-full w-full object-cover transition duration-1000 ease-out group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=1600&amp;q=90" alt="Profesional de salud brindando atención a una paciente" fetchpriority="high">
+                <video class="absolute inset-0 h-full w-full object-cover" data-health-hero-video muted loop playsinline preload="none" poster="https://images.pexels.com/videos/6130037/pexels-photo-6130037.jpeg?h=1000&amp;w=1500&amp;fit=crop" aria-hidden="true" hidden>
+                    <source src="https://videos.pexels.com/video-files/6130037/6130037-hd_1280_720_30fps.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#071a3a]/90 via-blue-950/25 to-cyan-950/10" aria-hidden="true"></div>
+                <div class="pointer-events-none absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/35 transition duration-700 group-hover:scale-110 sm:h-72 sm:w-72" aria-hidden="true"></div>
+                <div class="absolute left-6 top-6 z-10 flex items-center gap-3 sm:left-10 sm:top-10">
+                    <span class="grid h-11 w-11 place-items-center border border-white/60 bg-white/10 text-xl backdrop-blur-sm" aria-hidden="true">✚</span>
+                    <span class="text-xs font-bold uppercase tracking-[0.18em] text-white">Salud y cuidado integral</span>
+                </div>
+                <div class="absolute bottom-7 left-6 z-10 hidden border-l-2 border-cyan-300 pl-4 sm:bottom-10 sm:left-10 lg:block">
+                    <p class="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Aprender haciendo</p>
+                    <p class="font-serif text-2xl text-white sm:text-3xl">Cuidar con conocimiento y empatía.</p>
+                </div>
             </div>
-        </div>
+            <div class="relative z-10 flex min-h-[25rem] min-w-0 flex-col justify-center overflow-hidden bg-gradient-to-br from-[#0b1f46] via-[#102a56] to-[#075985] px-6 py-12 sm:px-12 lg:min-h-0 lg:px-12 lg:py-14 xl:px-16">
+                <div class="pointer-events-none absolute -right-12 top-12 h-48 w-48 rotate-12 border border-cyan-200/25 motion-safe:animate-shape-drift" aria-hidden="true"></div>
+                <p class="relative z-10 mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan-200 sm:mb-5">Programa de estudios · Huanta</p>
+                <h1 id="program-title" class="relative z-10 max-w-2xl font-serif text-4xl leading-[1.04] text-white sm:text-5xl lg:text-6xl">Enfermería Técnica</h1>
+                <p class="relative z-10 mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-6 sm:text-lg">Fórmate para brindar cuidados integrales, promoción de la salud y atención humana a las personas, familias y comunidades.</p>
+                <div class="relative z-10 mt-6 grid max-w-xl grid-cols-1 gap-3 border-t border-white/20 pt-5 sm:grid-cols-3 sm:gap-4">
+                    <div><p class="text-[11px] font-bold uppercase tracking-[0.15em] text-cyan-200">Duración</p><p class="mt-1 text-sm text-white">6 semestres</p></div>
+                    <div><p class="text-[11px] font-bold uppercase tracking-[0.15em] text-cyan-200">Modalidad</p><p class="mt-1 text-sm text-white">Presencial</p></div>
+                    <div><p class="text-[11px] font-bold uppercase tracking-[0.15em] text-cyan-200">Enfoque</p><p class="mt-1 text-sm text-white">Cuidado integral</p></div>
+                </div>
+                <div class="relative z-10 mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+                    <a class="inline-flex min-h-11 w-full items-center justify-center gap-3 bg-cyan-300 px-5 py-3 text-sm font-bold text-[#0b1f46] transition duration-300 hover:-translate-y-1 hover:bg-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 motion-reduce:transition-none sm:w-auto" href="#modules-title">Explorar módulos <span aria-hidden="true">↗</span></a>
+                    <a class="inline-flex min-h-11 w-full items-center justify-center border border-white/35 px-5 py-3 text-sm font-bold text-white transition duration-300 hover:border-white hover:bg-white/10 motion-reduce:transition-none sm:w-auto" href="#study-title">Ver plan de estudios</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-detail order-2 grid w-full grid-cols-1 items-center gap-10 bg-white px-5 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 lg:px-[clamp(4rem,8vw,8rem)] lg:py-20" aria-labelledby="about-title">
+            <div class="group relative min-h-[22rem] overflow-hidden bg-slate-900 sm:min-h-[30rem]">
+                <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=85" alt="Profesional de enfermería acompañando a una paciente" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-tr from-slate-950/55 via-transparent to-cyan-900/10" aria-hidden="true"></div>
+                <span class="absolute bottom-5 left-5 border-l-2 border-cyan-300 py-1 pl-4 text-sm font-bold text-white sm:bottom-8 sm:left-8">Vocación · conocimiento · servicio</span>
+            </div>
+            <div class="mx-auto w-full max-w-2xl">
+                <p class="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-700">Formación para cuidar</p>
+                <h2 id="about-title" class="font-serif text-3xl leading-tight text-[#102a56] sm:text-4xl lg:text-5xl">Conocimiento y vocación al servicio de las personas</h2>
+                <p class="mt-5 text-base leading-relaxed text-slate-600">El Programa de Estudios de Enfermería Técnica prepara a sus estudiantes para afrontar los desafíos del sector salud con competencia y empatía. Durante los tres años de formación desarrollan conocimientos de anatomía, fisiología, farmacología y técnicas de enfermería, junto con habilidades prácticas mediante experiencias clínicas supervisadas. La formación busca profesionales que integren el dominio técnico con un trato humano y respetuoso, preparados para contribuir al bienestar en hospitales, clínicas y centros comunitarios.</p>
+                <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="border-l-2 border-cyan-500 bg-slate-50 p-5"><p class="text-xs font-bold uppercase tracking-wider text-cyan-700">Título</p><p class="mt-2 font-semibold text-[#102a56]">Profesional Técnico en Enfermería Técnica</p></div>
+                    <div class="border-l-2 border-blue-700 bg-slate-50 p-5"><p class="text-xs font-bold uppercase tracking-wider text-blue-700">Duración</p><p class="mt-2 font-semibold text-[#102a56]">6 semestres · 3 años</p></div>
+                    <div class="border-l-2 border-teal-600 bg-slate-50 p-5"><p class="text-xs font-bold uppercase tracking-wider text-teal-700">Modalidad</p><p class="mt-2 font-semibold text-[#102a56]">Presencial</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modulos" class="modules-section order-3 relative w-full overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50 px-5 py-16 sm:px-8 sm:py-20 lg:px-16 lg:py-24" aria-labelledby="modules-title">
+            <div class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-cyan-300/20" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-blue-300/20" aria-hidden="true"></div>
+            <div class="relative z-10 mx-auto mb-12 max-w-4xl text-center">
+                <p class="mb-4 text-xs font-extrabold uppercase tracking-[0.16em] text-blue-700">Promoción · prevención · atención integral</p>
+                <p class="mx-auto mb-5 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">Durante los tres años de formación desarrollarás competencias para acompañar a las personas en las distintas etapas de vida y contribuir al bienestar de tu comunidad.</p>
+                <h2 id="modules-title" class="font-serif text-4xl leading-tight text-[#102a56] sm:text-5xl lg:text-6xl">Módulos Profesionales</h2>
+            </div>
+
+            <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" aria-label="Módulos profesionales">
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-blue-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none" aria-labelledby="module-one-title">
+                    <div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+                        <img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85" alt="Profesional de enfermería preparando materiales para la atención de salud" loading="lazy">
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-blue-900/10 to-transparent" aria-hidden="true"></div>
+                        <span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">01</span>
+                    </div>
+                    <div class="flex flex-1 flex-col items-start bg-[#071f49] p-5 text-blue-50 sm:p-6">
+                        <p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-cyan-300">Módulo profesional · 01</p>
+                        <h3 id="module-one-title" class="mb-3 font-serif text-2xl leading-snug text-white">Asistencia en promoción y prevención de la salud</h3>
+                        <p class="mb-5 text-sm leading-relaxed text-blue-100/80">Realiza actividades de promoción de la salud con enfoque intercultural, de acuerdo con la situación local de salud, las políticas sectoriales y la normativa vigente.</p>
+                    </div>
+                </article>
+
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-blue-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none" aria-labelledby="module-two-title">
+                    <div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+                        <img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.pexels.com/videos/6130026/pexels-photo-6130026.jpeg?h=1000&amp;w=1500&amp;fit=crop" alt="Enfermera revisando el estado de una paciente en una habitación clínica" loading="lazy">
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-blue-900/10 to-transparent" aria-hidden="true"></div>
+                        <span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">02</span>
+                    </div>
+                    <div class="flex flex-1 flex-col items-start bg-[#071f49] p-5 text-blue-50 sm:p-6">
+                        <p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-cyan-300">Módulo profesional · 02</p>
+                        <h3 id="module-two-title" class="mb-3 font-serif text-2xl leading-snug text-white">Asistencia en la atención básica de la salud</h3>
+                        <p class="mb-5 text-sm leading-relaxed text-blue-100/80">Asiste en la atención de las necesidades básicas de salud de las personas en sus diferentes etapas de vida, con enfoque intercultural y de acuerdo con las indicaciones, el nivel de atención y la normativa vigente.</p>
+                    </div>
+                </article>
+
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-blue-900/10 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl motion-reduce:transition-none" aria-labelledby="module-three-title">
+                    <div class="relative h-56 overflow-hidden bg-slate-900 sm:h-64 lg:h-72">
+                        <img class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none" src="https://images.pexels.com/videos/6130537/clinic-corona-coronavirus-covid-6130537.jpeg?h=1000&amp;w=1500&amp;fit=crop" alt="Personal de enfermería y medicina conversando sobre la atención de una paciente" loading="lazy">
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-blue-900/10 to-transparent" aria-hidden="true"></div>
+                        <span class="absolute bottom-4 right-5 z-10 font-serif text-4xl font-bold text-white">03</span>
+                    </div>
+                    <div class="flex flex-1 flex-col items-start bg-[#071f49] p-5 text-blue-50 sm:p-6">
+                        <p class="mb-3 text-[11px] font-extrabold uppercase tracking-widest text-cyan-300">Módulo profesional · 03</p>
+                        <h3 id="module-three-title" class="mb-3 font-serif text-2xl leading-snug text-white">Asistencia en la atención integral en salud</h3>
+                        <p class="mb-5 text-sm leading-relaxed text-blue-100/80">Asiste en los cuidados integrales de salud a las personas en las diferentes etapas de vida, aplicando los enfoques intercultural, de derechos, de género y familiar, conforme a la normativa vigente.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="perfil-egreso" class="graduate-profile-section order-5 bg-[#f8f7f2] px-5 py-16 text-[#25333c] sm:px-8 lg:px-12 lg:py-24" aria-labelledby="profile-title">
+            <figure class="graduate-profile-visual">
+                <img class="h-full w-full object-cover" src="https://images.pexels.com/videos/6130537/clinic-corona-coronavirus-covid-6130537.jpeg?h=1000&amp;w=1500&amp;fit=crop" alt="Personal de enfermería y medicina conversando sobre la atención de una paciente" loading="lazy">
+                <figcaption><span>01 / 04</span> Vocación de servicio con compromiso profesional.</figcaption>
+            </figure>
+            <div class="graduate-profile-heading mx-auto mb-10 max-w-4xl text-left md:text-center">
+                <p class="eyebrow">Perfil de egreso</p>
+                <h2 id="profile-title">Lo que podrás aportar</h2>
+                <p>Conoce las capacidades personales y profesionales que orientan la formación en Enfermería Técnica.</p>
+            </div>
+            <div class="profile-tabs mx-auto max-w-7xl">
+                <div class="profile-tab-list" role="tablist" aria-label="Perfil profesional de Enfermería Técnica">
+                    <button id="tab-profile" class="profile-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-profile" data-profile-tab="panel-profile">Perfil profesional</button>
+                    <button id="tab-competencies" class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-competencies" data-profile-tab="panel-competencies" tabindex="-1">Competencias</button>
+                    <button id="tab-employability" class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-employability" data-profile-tab="panel-employability" tabindex="-1">Empleabilidad</button>
+                    <button id="tab-fields" class="profile-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-fields" data-profile-tab="panel-fields" tabindex="-1">Ámbitos de desempeño</button>
+                </div>
+                <div id="panel-profile" class="profile-panel" role="tabpanel" aria-labelledby="tab-profile" data-profile-panel>
+                    Profesional técnico de nivel superior, capacitado para implementar los cuidados de enfermería centrados en la persona, brindando atención integral a la persona, familia y comunidad en los diferentes niveles de atención y prevención a lo largo de su ciclo vital. Puede desempeñarse en un rol propio o colaborar con el equipo multidisciplinario, considerando las normas vigentes y la ética profesional. Es capaz de abordar situaciones y resolver problemas relacionados con su actividad y con la organización, comunicándose efectivamente y utilizando el inglés, el quechua y las tecnologías de la información y comunicación, con consideración de su entorno intercultural.
+                </div>
+                <div id="panel-competencies" class="profile-panel" role="tabpanel" aria-labelledby="tab-competencies" data-profile-panel hidden>
+                    <ul class="list-disc space-y-2 pl-5">
+                        <li>Realizar actividades de promoción de la salud con enfoque intercultural, de acuerdo con la situación local de salud, las políticas sectoriales nacionales, regionales y la normativa vigente.</li>
+                        <li>Realizar actividades de prevención en salud individual y colectiva con enfoque intercultural, de acuerdo con guías, procedimientos establecidos y normativa vigente.</li>
+                        <li>Asistir en la atención de las necesidades básicas de salud de las personas en sus diferentes etapas de vida, con enfoque intercultural y según las indicaciones del jefe inmediato, el nivel de atención y la normativa vigente.</li>
+                        <li>Asistir en los cuidados integrales de salud a las personas en las diferentes etapas de vida, aplicando los enfoques intercultural, de derechos, de género y familiar, conforme a la normativa vigente.</li>
+                    </ul>
+                </div>
+                <div id="panel-employability" class="profile-panel" role="tabpanel" aria-labelledby="tab-employability" data-profile-panel hidden>
+                    <ul class="list-disc space-y-2 pl-5">
+                        <li><strong>Comunicación efectiva:</strong> expresar con claridad conceptos, ideas, sentimientos, hechos y opiniones, de forma oral y escrita, para interactuar en contextos sociales y laborales diversos.</li>
+                        <li><strong>Inglés:</strong> comprender y comunicar ideas a nivel oral y escrito, e interactuar en situaciones de contextos sociales y laborales.</li>
+                        <li><strong>Tecnologías de la información:</strong> manejar herramientas TIC para buscar y analizar información, comunicarse y realizar procedimientos vinculados al área profesional.</li>
+                        <li><strong>Ética:</strong> establecer relaciones con respeto y justicia, contribuyendo a una convivencia democrática que considere la diversidad y dignidad de las personas.</li>
+                        <li><strong>Solución de problemas:</strong> identificar situaciones complejas y evaluar posibles soluciones para atender una necesidad.</li>
+                        <li><strong>Cultura ambiental:</strong> convivir de manera ética, autónoma, responsable y sostenible, previniendo y reduciendo los impactos ambientales.</li>
+                        <li><strong>Quechua:</strong> comprender y comunicar ideas a nivel oral y escrito en contextos sociales y laborales.</li>
+                        <li><strong>Trabajo colaborativo:</strong> participar activamente en objetivos comunes con respeto y justicia, sin estereotipos de género u otros.</li>
+                    </ul>
+                </div>
+                <div id="panel-fields" class="profile-panel" role="tabpanel" aria-labelledby="tab-fields" data-profile-panel hidden>
+                    <ul class="list-disc space-y-2 pl-5">
+                        <li>Ejecución de procedimientos básicos de enfermería.</li>
+                        <li>Promoción y prevención de la salud.</li>
+                        <li>Protección, recuperación y rehabilitación del individuo, la familia y la comunidad.</li>
+                        <li>Áreas administrativas en centros de operaciones de emergencias, farmacia y hospitalización.</li>
+                        <li>Tópico, triaje, admisión, centros farmacéuticos y boticas.</li>
+                        <li>Promoción de la salud y prevención de enfermedades.</li>
+                        <li>Prevención de accidentes de trabajo y traslado de pacientes accidentados.</li>
+                        <li>Fisioterapia, rehabilitación y medicina alternativa.</li>
+                        <li>Masajes y rehabilitación, manejo de equipos y preparación de material, trabajo independiente y centros de cosmiatría.</li>
+                        <li>Atención de personas adultas mayores y personas con discapacidad en las diferentes etapas de vida, y manejo de tratamientos según prescripción médica.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-section order-4 relative grid w-full grid-cols-1 overflow-hidden bg-gradient-to-br from-[#102a56] via-[#123b68] to-cyan-900 px-5 py-16 text-white sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-[clamp(4rem,8vw,8rem)] lg:py-24" aria-labelledby="future-title">
+            <div class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full border border-cyan-200/20" aria-hidden="true"></div>
+            <div class="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 lg:grid-cols-[1fr_auto]">
+                <div>
+                    <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-200">Tu futuro empieza aquí</p>
+                    <h2 id="future-title" class="max-w-3xl font-serif text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">Cuida, aprende y transforma vidas</h2>
+                    <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/80">Conoce más sobre admisión y oportunidades de formación en el Instituto de Educación Superior Público Huanta.</p>
+                </div>
+                <a class="inline-flex min-h-12 items-center justify-center gap-3 bg-cyan-300 px-6 py-3 text-sm font-bold text-[#102a56] transition hover:-translate-y-1 hover:bg-cyan-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="index.html#contacto">Solicitar información <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section id="plan-estudios" class="study-section order-6 relative w-full overflow-hidden px-5 py-16 sm:px-8 lg:px-16 lg:py-24" aria-labelledby="study-title">
+            <div class="study-heading">
+                <p class="eyebrow">Tu ruta profesional</p>
+                <h2 id="study-title">Plan de Estudios</h2>
+                <p>Avanza semestre a semestre y desarrolla las competencias para brindar cuidados de enfermería con calidad, respeto y enfoque intercultural.</p>
+            </div>
+            <div class="study-layout">
+                <article class="profile-card">
+                    <img class="profile-student-image" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Profesional de enfermería acompañando a una paciente" loading="lazy">
+                    <span class="profile-orb" aria-hidden="true"></span>
+                    <p class="card-label">Tu perfil profesional</p>
+                    <h3>Profesional técnico en Enfermería</h3>
+                    <p>Aprenderás a promover la salud, prevenir enfermedades y asistir en cuidados integrales a personas, familias y comunidades durante todo el ciclo de vida.</p>
+                    <div class="profile-tags" aria-label="Competencias que desarrollarás">
+                        <span>Cuidado integral</span><span>Prevención</span><span>Vocación de servicio</span>
+                    </div>
+                </article>
+                <div class="semester-plan">
+                    <h3>Malla curricular</h3>
+                    <div class="space-y-2">
+                    <details class="semester-detail" open>
+                        <summary><span>01</span> Semestre académico I</summary>
+                        <div class="overflow-x-auto pb-5">
+                            <table class="semester-table">
+                                <thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Salud comunitaria</td><td>3</td><td>80</td></tr>
+                                    <tr><td>Promoción de la salud</td><td>5</td><td>128</td></tr>
+                                    <tr><td>Educación para la salud</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Asistencia en inmunizaciones</td><td>3</td><td>80</td></tr>
+                                    <tr><td>Seguridad y salud en el trabajo</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Comunicación oral</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Aplicaciones en internet</td><td>2</td><td>48</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details class="semester-detail">
+                        <summary><span>02</span> Semestre académico II</summary>
+                        <div class="overflow-x-auto pb-5">
+                            <table class="semester-table">
+                                <thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Epidemiología</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Salud en desastres naturales</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Prevención en salud pública</td><td>5</td><td>128</td></tr>
+                                    <tr><td>Anatomía y fisiología humana</td><td>4</td><td>112</td></tr>
+                                    <tr><td>Fundamentos de bioseguridad</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Interpretación y producción de textos</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Ofimática</td><td>2</td><td>48</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details class="semester-detail">
+                        <summary><span>03</span> Semestre académico III</summary>
+                        <div class="overflow-x-auto pb-5">
+                            <table class="semester-table">
+                                <thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Asistencia básica hospitalaria</td><td>5</td><td>144</td></tr>
+                                    <tr><td>Administración de medicamentos</td><td>4</td><td>112</td></tr>
+                                    <tr><td>Documentación en salud</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Microbiología y muestras biológicas</td><td>3</td><td>80</td></tr>
+                                    <tr><td>Inglés para la comunicación oral</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Comunicación efectiva en quechua</td><td>2</td><td>48</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details class="semester-detail">
+                        <summary><span>04</span> Semestre académico IV</summary>
+                        <div class="overflow-x-auto pb-5">
+                            <table class="semester-table">
+                                <thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Atención en urgencias y emergencias</td><td>4</td><td>112</td></tr>
+                                    <tr><td>Procedimientos invasivos y no invasivos</td><td>5</td><td>144</td></tr>
+                                    <tr><td>Bioestadística en salud</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Dietas y nutrición</td><td>3</td><td>80</td></tr>
+                                    <tr><td>Comprensión y redacción en inglés</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Medio ambiente y desarrollo sostenible</td><td>2</td><td>48</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details class="semester-detail">
+                        <summary><span>05</span> Semestre académico V</summary>
+                        <div class="overflow-x-auto pb-5">
+                            <table class="semester-table">
+                                <thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Salud materno neonatal</td><td>4</td><td>96</td></tr>
+                                    <tr><td>Atención del niño y adolescente</td><td>4</td><td>96</td></tr>
+                                    <tr><td>Atención al usuario quirúrgico</td><td>4</td><td>96</td></tr>
+                                    <tr><td>Atención del adulto y adulto mayor</td><td>4</td><td>96</td></tr>
+                                    <tr><td>Técnicas de resolución de conflictos</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Comportamiento ético</td><td>2</td><td>48</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details class="semester-detail">
+                        <summary><span>06</span> Semestre académico VI</summary>
+                        <div class="overflow-x-auto pb-5">
+                            <table class="semester-table">
+                                <thead><tr><th>Unidad didáctica</th><th>Créditos</th><th>Horas semestrales</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Medicina alternativa</td><td>3</td><td>80</td></tr>
+                                    <tr><td>Fisioterapia y rehabilitación</td><td>4</td><td>112</td></tr>
+                                    <tr><td>Salud mental</td><td>4</td><td>96</td></tr>
+                                    <tr><td>Atención del paciente en estado crítico</td><td>4</td><td>96</td></tr>
+                                    <tr><td>Innovación tecnológica</td><td>2</td><td>48</td></tr>
+                                    <tr><td>Plan de negocios</td><td>2</td><td>48</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section order-7 relative w-full overflow-hidden bg-gradient-to-br from-[#071f49] via-[#102a56] to-[#075985] px-5 py-16 text-white sm:px-8 lg:px-16 lg:py-24" aria-labelledby="testimonials-title">
+            <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border border-cyan-200/20" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full border-[2rem] border-blue-300/10" aria-hidden="true"></div>
+            <div class="relative z-10 mx-auto max-w-7xl">
+                <div class="mx-auto mb-10 max-w-3xl text-center">
+                    <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-200">Testimonios · experiencias reales</p>
+                    <h2 id="testimonials-title" class="font-serif text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">Lo que dicen nuestros estudiantes y egresados</h2>
+                    <p class="mt-4 text-sm leading-relaxed text-blue-100/80 sm:text-base">Experiencias compartidas por la comunidad de Enfermería Técnica del Instituto Huanta.</p>
+                </div>
+                <div class="grid items-start gap-5 md:grid-cols-3">
+                    <article class="group rounded-xl border border-white/50 border-t-4 border-t-cyan-300 bg-white p-7 text-slate-800 shadow-xl transition duration-300 hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                        <span class="font-serif text-5xl leading-none text-blue-600" aria-hidden="true">“</span>
+                        <blockquote class="mt-2 text-sm leading-6 text-slate-600">El Instituto Huanta me brindó las herramientas necesarias para desarrollarme como profesional en el campo de la salud. Gracias a la excelente formación y a las prácticas clínicas, conseguí empleo rápidamente después de graduarme.</blockquote>
+                        <p class="mt-6 font-semibold text-slate-900">Lucía Fernández</p><p class="mt-1 text-sm text-slate-500">Egresada de Enfermería Técnica</p>
+                    </article>
+                    <article class="group rounded-xl border border-white/50 border-t-4 border-t-blue-500 bg-white p-7 text-slate-800 shadow-xl transition duration-300 hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                        <span class="font-serif text-5xl leading-none text-blue-600" aria-hidden="true">“</span>
+                        <blockquote class="mt-2 text-sm leading-6 text-slate-600">Estudiar en el Instituto Huanta ha sido una experiencia gratificante. Las clases son muy completas y las prácticas en hospitales me han permitido poner en práctica lo aprendido en el aula. Me siento cada vez más preparada para enfrentar los retos del día a día en el campo de la salud.</blockquote>
+                        <p class="mt-6 font-semibold text-slate-900">Maribel Ore</p><p class="mt-1 text-sm text-slate-500">Estudiante de Enfermería Técnica</p>
+                    </article>
+                    <article class="group rounded-xl border border-white/50 border-t-4 border-t-sky-400 bg-white p-7 text-slate-800 shadow-xl transition duration-300 hover:-translate-y-2 hover:shadow-2xl motion-reduce:transition-none">
+                        <span class="font-serif text-5xl leading-none text-blue-600" aria-hidden="true">“</span>
+                        <blockquote class="mt-2 text-sm leading-6 text-slate-600">Lo que más valoro de mi formación en el Instituto Huanta es la calidad de los docentes y las oportunidades de práctica clínica. Desde el primer año, pude adquirir experiencia real en centros de salud, lo que me permitió entrar al mercado laboral con confianza y seguridad.</blockquote>
+                        <p class="mt-6 font-semibold text-slate-900">Liz Cochachi</p><p class="mt-1 text-sm text-slate-500">Egresada de Enfermería Técnica</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <section id="pie-pagina" class="footer-section" aria-label="Pie de página">
+        <footer class="site-footer">
+            <section class="footer-main">
+                <section class="footer-brand">
+                    <img class="footer-logo-image" src="assets/logo-huanta.png" alt="IESP Huanta">
+                    <p>Educación superior pública al servicio de Huanta y Ayacucho.</p>
+                </section>
+                <section class="footer-column">
+                    <h3>Explora</h3>
+                    <a href="index.html#nosotros">Nosotros</a>
+                    <a href="index.html#carreras">Programas de estudio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="index.html#noticias">Noticias</a>
+                </section>
+                <section class="footer-column">
+                    <h3>Información</h3>
+                    <p>Jr. Córdoba N.º 650<br>Huanta, Ayacucho - Perú</p>
+                    <a href="tel:+5166322296">(066) 322296</a>
+                    <a href="mailto:informes@iestphuanta.edu.pe">informes@iestphuanta.edu.pe</a>
+                </section>
+                <section class="footer-column footer-connect">
+                    <h3>Conecta</h3>
+                    <p>Recibe novedades sobre admisión, eventos y vida institucional.</p>
+                    <a class="footer-social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">f</span> Facebook</a>
+                    <a class="footer-action" href="index.html#contacto">Contáctanos <span aria-hidden="true">↗</span></a>
+                </section>
+            </section>
+            <section class="footer-bottom">
+                <p>&copy; 2026 IESP Huanta. Todos los derechos reservados.</p>
+                <p>Comprometidos con una educación de calidad.</p>
+            </section>
+        </footer>
+    </section>
+
+    <script>
+        const mobileNavToggle = document.querySelector("[data-mobile-nav-toggle]");
+        const siteNavigation = document.querySelector("#site-navigation");
+        const mobileNavLabel = document.querySelector("[data-menu-label]");
+        const healthHeroVideo = document.querySelector("[data-health-hero-video]");
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function setMobileNavigation(isOpen) {
+            mobileNavToggle.setAttribute("aria-expanded", String(isOpen));
+            mobileNavToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+            mobileNavLabel.textContent = isOpen ? "Cerrar" : "Menú";
+            siteNavigation.classList.toggle("is-open", isOpen);
+        }
+
+        mobileNavToggle.addEventListener("click", () => {
+            setMobileNavigation(mobileNavToggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        siteNavigation.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => setMobileNavigation(false));
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") setMobileNavigation(false);
+        });
+
+        if (healthHeroVideo && !prefersReducedMotion) {
+            healthHeroVideo.hidden = false;
+            healthHeroVideo.play().catch(() => {
+                healthHeroVideo.hidden = true;
+            });
+        }
+
+        const profileTabs = Array.from(document.querySelectorAll("[data-profile-tab]"));
+        const profilePanels = Array.from(document.querySelectorAll("[data-profile-panel]"));
+
+        function activateProfileTab(tab) {
+            profileTabs.forEach((item) => {
+                const isActive = item === tab;
+                item.setAttribute("aria-selected", String(isActive));
+                item.tabIndex = isActive ? 0 : -1;
+                item.classList.toggle("is-active", isActive);
+            });
+
+            profilePanels.forEach((panel) => {
+                panel.hidden = panel.id !== tab.getAttribute("aria-controls");
+            });
+        }
+
+        profileTabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => activateProfileTab(tab));
+            tab.addEventListener("keydown", (event) => {
+                if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+                event.preventDefault();
+                const direction = event.key === "ArrowRight" ? 1 : -1;
+                const nextTab = profileTabs[(index + direction + profileTabs.length) % profileTabs.length];
+                activateProfileTab(nextTab);
+                nextTab.focus();
+            });
+        });
+    </script>
 </body>
 </html>

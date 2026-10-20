@@ -2204,6 +2204,30 @@ main {
     background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=320&q=80');
 }
 
+.automotive-program .semester-plan details.semester-detail:nth-of-type(1)::before {
+    background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=320&q=80');
+}
+
+.automotive-program .semester-plan details.semester-detail:nth-of-type(2)::before {
+    background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=320&q=80');
+}
+
+.automotive-program .semester-plan details.semester-detail:nth-of-type(3)::before {
+    background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=320&q=80');
+}
+
+.automotive-program .semester-plan details.semester-detail:nth-of-type(4)::before {
+    background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=320&q=80');
+}
+
+.automotive-program .semester-plan details.semester-detail:nth-of-type(5)::before {
+    background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=320&q=80');
+}
+
+.automotive-program .semester-plan details.semester-detail:nth-of-type(6)::before {
+    background-image: linear-gradient(180deg, rgba(8, 45, 92, 0.2), rgba(8, 45, 92, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=320&q=80');
+}
+
 .semester-plan details.semester-detail[open] {
     padding-left: 8.5rem;
 }
